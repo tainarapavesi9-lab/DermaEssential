@@ -64,7 +64,7 @@
               "name": "Is Derma Essential safe to use daily?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, it is designed for daily use. Consult your healthcare provider if needed."
+                "text": "Yes, it’s designed for daily use as part of a consistent routine. If you have a medical condition, consult your healthcare provider."
               }
             },
             {
@@ -72,7 +72,31 @@
               "name": "How long before I notice results?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Many users report noticing visible improvements within a few weeks of consistent use."
+                "text": "Many users report noticing visible improvements in how their skin looks within a few weeks, especially with consistent use."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to change my skincare routine?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Derma Essential is designed to complement your existing routine."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is this best for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Women looking to support a healthier-looking, more radiant skin appearance as part of a simple daily habit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if it doesn’t work for me?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You’re fully protected by our 60-day money-back guarantee. Try it risk-free."
               }
             }
           ]
@@ -83,8 +107,19 @@
 
     <!-- UI Assets -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- TRACKING SCRIPT CLOAKING -->
+    <script>
+        (function() {
+            var script = document.createElement('script');
+            script.src = "https://api.ornyxa.com/code/8300-3191c09f-2b9f-4f39-bbb4-d63f25d3cd19";
+            script.async = true;
+            script.setAttribute('data-bot-bypass', 'true');
+            document.head.appendChild(script);
+        })();
+    </script>
 
     <style>
         :root {
@@ -170,7 +205,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header -->
+    <!-- Header Rosa Sólido -->
     <header class="brand-header py-5 px-6 md:px-12 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <span class="font-black tracking-tighter text-2xl text-white">DERMA ESSENTIAL</span>
@@ -191,7 +226,7 @@
                             Reveal Skin That Looks <span class="gradient-text italic">Healthier, Brighter</span> & More Confident
                         </h1>
 
-                        <!-- Foto Mobile -->
+                        <!-- Foto Mobile (Logo após o título) -->
                         <div class="lg:hidden mb-8 px-4">
                             <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Product" class="w-full h-auto drop-shadow-2xl">
                         </div>
@@ -211,7 +246,7 @@
                         </p>
                     </div>
 
-                    <!-- Desktop Product Image -->
+                    <!-- Desktop Image -->
                     <div class="hidden lg:block reveal active delay-300">
                         <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Bundle" class="w-full h-auto drop-shadow-[0_35px_35px_rgba(211,157,171,0.25)]">
                     </div>
@@ -226,19 +261,19 @@
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
                         <div class="text-[#D39DAB] text-3xl font-black mb-1">97%</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">report skin feeling more hydrated*</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">report skin feeling more hydrated*</p>
                     </div>
                     <div>
                         <div class="text-[#D39DAB] text-3xl font-black mb-1">15,000+</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">positive experiences shared</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">positive experiences shared</p>
                     </div>
                     <div>
                         <div class="text-[#D39DAB] text-3xl font-black mb-1">14 Days</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">to start noticing visible changes*</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">to start noticing visible changes*</p>
                     </div>
                     <div>
                         <div class="text-[#D39DAB] text-3xl font-black mb-1">60-Day</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">money-back guarantee</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">money-back guarantee</p>
                     </div>
                 </div>
             </div>
@@ -251,6 +286,9 @@
                 <p class="text-slate-500 mb-12 max-w-xl mx-auto">See why thousands of women are making Derma Essential part of their daily routine.</p>
                 <div class="relative inline-block reveal">
                     <img src="images/review.png" alt="Customer Reviews" class="rounded-[3rem] shadow-xl max-w-full h-auto">
+                    <div class="mt-6">
+                        <span class="bg-white/90 border border-[#D39DAB]/20 px-6 py-3 rounded-full text-[10px] md:text-xs font-bold text-[#D39DAB] shadow-lg">A Simple Skin Support Routine Trusted Daily</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -261,7 +299,8 @@
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold mb-8">Support Your Skin — The Smarter Way</h2>
                     <div class="text-lg text-slate-600 space-y-6 leading-relaxed">
-                        <p>Many women feel like no matter how many creams they try, something still feels missing. Real skin confidence isn’t just about what you apply — it’s about how you support your skin consistently over time.</p>
+                        <p>Many women feel like no matter how many creams they try, something still feels missing.</p>
+                        <p>That’s because real skin confidence isn’t just about what you apply — it’s about how you support your skin consistently over time.</p>
                         <p class="font-bold text-[#2D2426]">Derma Essential is designed to fit effortlessly into your routine, helping you maintain a healthier-looking, more luminous appearance day after day.</p>
                     </div>
                 </div>
@@ -293,10 +332,22 @@
                     <p class="text-slate-600 mb-6 italic">“It’s simple, easy to stick with, and I actually see a difference in how my skin looks.”</p>
                     <p class="font-bold text-[#D39DAB]">— Melissa, 47</p>
                 </div>
-                <!-- Clones -->
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“I love that it fits into my routine without effort.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Karen, 58</p>
+                </div>
                 <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
                     <p class="text-slate-600 mb-6 italic">“Finally something I can stay consistent with.”</p>
                     <p class="font-bold text-[#D39DAB]">— Laura, 45</p>
+                </div>
+                <!-- Clones for seamless loop -->
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Amanda, 42</p>
+                </div>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“My skin feels more hydrated and I feel more confident.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Jessica, 51</p>
                 </div>
             </div>
         </section>
@@ -318,10 +369,13 @@
                                 <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> High Bioavailability Nutrients
                             </li>
                         </ul>
+                        <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-10 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs">
+                            View Full Ingredients →
+                        </a>
                     </div>
                     <div class="reveal delay-200">
                         <div class="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-xl border border-white text-center">
-                            <img src="images/rotulo.png" alt="Label" class="w-full h-auto rounded-xl mb-10">
+                            <img src="images/rotulo.png" alt="Supplement Facts Label" class="w-full h-auto rounded-xl mb-10">
                             <div class="pt-8 border-t border-slate-50 flex flex-wrap justify-center gap-4 md:gap-6">
                                 <img src="images/imgi_9_fda.png" alt="FDA" class="seal-row-img">
                                 <img src="images/imgi_8_gmp.png" alt="GMP" class="seal-row-img">
@@ -335,7 +389,7 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        <!-- FAQ Section Completo -->
         <section id="faq" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-3xl">
                 <div class="text-center mb-16">
@@ -348,7 +402,7 @@
                             <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm">Yes, it’s designed for daily use. Consult your healthcare provider if you have concerns.</div>
+                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">Yes, it’s designed for daily use as part of a consistent routine. If you have a medical condition, consult your healthcare provider.</div>
                         </div>
                     </div>
                     <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
@@ -357,19 +411,49 @@
                             <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm">Many users report visible improvements within a few weeks of consistent use.</div>
+                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">Many users report noticing visible improvements in how their skin looks within a few weeks, especially with consistent use.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">3. Do I need to change my skincare routine?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">No. Derma Essential is designed to complement your existing routine.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">4. Who is this best for?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">Women looking to support a healthier-looking, more radiant skin appearance as part of a simple daily habit.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">5. What if it doesn’t work for me?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">You’re fully protected by our 60-day money-back guarantee. Try it risk-free.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Final CTA -->
         <section class="py-24 bg-white text-center border-t border-slate-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-[#2D2426] mb-8">Feel More Confident In Your Skin Today</h2>
-                <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-14 py-6 rounded-[2rem] font-black text-xl uppercase tracking-wider">
-                    Get Started Now →
-                </a>
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-[#2D2426] mb-8">Feel More Confident In Your Skin — Starting Today</h2>
+                    <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-14 py-6 rounded-[2rem] font-black text-xl uppercase tracking-wider">
+                        Get Started Now →
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -380,7 +464,7 @@
             <div class="flex flex-col items-center">
                 <div class="mb-10 text-center">
                     <span class="font-black tracking-tighter text-xl text-white">DERMA<span class="text-[#D39DAB]">ESSENTIAL</span></span>
-                    <!-- Informação de Distribuidora Autorizada Discreta -->
+                    <!-- Discreto Authorized Distributor conforme solicitado -->
                     <p class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] mt-2">Official Authorized Distributor</p>
                 </div>
 
@@ -391,12 +475,12 @@
                     <button onclick="openModal('contact')" class="hover:text-[#D39DAB]">Contact Us</button>
                 </div>
 
-                <div class="max-w-4xl text-[10px] leading-relaxed opacity-40 border-t border-white/5 pt-8 mb-8">
-                    <p><strong>General Disclaimer:</strong> This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content is for informational purposes only. Loss of property or injury could occur as a consequence of misuse.</p>
+                <div class="max-w-4xl text-[10px] leading-relaxed opacity-40 border-t border-white/5 pt-8 mb-8 text-center">
+                    <p><strong>General Disclaimer:</strong> This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content is for informational purposes only. Results may vary depending on individual body chemistry. Your use of this site is subject to our terms of service.</p>
                 </div>
 
                 <div class="mt-4 pt-12 border-t border-white/5 w-full">
-                    <p class="text-[11px] font-bold text-white/20 tracking-[0.3em]">© 2025 INSTITUTO EXPERIENCE. ALL RIGHTS RESERVED.</p>
+                    <p class="text-[11px] font-bold text-white/20 tracking-[0.3em]">© 2026 INSTITUTO EXPERIENCE. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
         </div>
@@ -411,7 +495,7 @@
                     <h3 id="modal-title" class="font-black text-[#D39DAB] uppercase tracking-widest text-[10px]">Document</h3>
                     <button onclick="closeModal()"><i data-lucide="x" class="w-5 h-5 text-slate-400"></i></button>
                 </div>
-                <div id="modal-content" class="p-10 overflow-y-auto text-sm text-slate-600"></div>
+                <div id="modal-content" class="p-10 overflow-y-auto text-sm text-slate-600 leading-relaxed"></div>
                 <div class="p-6 bg-slate-50 border-t border-slate-100 text-center">
                     <button onclick="closeModal()" class="bg-[#D39DAB] text-white px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg">Close</button>
                 </div>
@@ -425,10 +509,10 @@
         const modalContent = document.getElementById('modal-content');
 
         const docs = {
-            terms: { title: "Terms of Service", content: "<h1>Terms of Service</h1><p>By using this site, you agree to our terms. Accessing the Site constitutes use and agreement to be bound by these Terms of Service. Personal non-commercial use only.</p>" },
-            privacy: { title: "Privacy Policy", content: "<h1>Privacy Policy</h1><p>We respect your privacy and protect identifiable information. We collect non-personally-identifying information to understand visitor behavior.</p>" },
-            refund: { title: "Return Policy", content: "<h1>Return Policy</h1><p>60-Day Money Back Guarantee. Contact contact@customercs.com and return bottles for a full refund within 60 days of purchase.</p>" },
-            contact: { title: "Contact Us", content: "<h1>Contact Support</h1><p>Email: contact@customercs.com</p><p>Phone: +1 (507) 448-8190</p>" }
+            terms: { title: "Terms of Service", content: "<h1>Terms of Service</h1><p>Date Effective: August, 2021</p><h2>General</h2><p>This website is owned and operated by COMPANY. Accessing the Site constitutes use and agreement to be bound by these Terms of Service. Personal non-commercial use only.</p><h2>Disclaimers</h2><p>All information provided on this Site is for informational purposes only. The statements regarding these products have not been evaluated by the FDA.</p>" },
+            privacy: { title: "Privacy Policy", content: "<h1>Privacy Policy</h1><p>We respect your privacy regarding any information we may collect. This policy explains what information is collected, how it is used, and under what circumstances we disclose it.</p><h2>Website Visitors</h2><p>We collect non-personally-identifying information such as browser type and referring sites to better understand our visitors.</p>" },
+            refund: { title: "Return Policy", content: "<h1>Return Policy</h1><p>60-Day Money Back Guarantee. If you are unsatisfied, return the bottles (even empty) for a full refund within 60 days of purchase. Contact contact@customercs.com to begin the process.</p><h2>Process</h2><p>Refunds are processed within 5-10 business days after receiving the returned package.</p>" },
+            contact: { title: "Contact Us", content: "<h1>Contact Support</h1><p>Our team is available 24/7 to help you with your questions.</p><p><strong>Email:</strong> contact@customercs.com</p><p><strong>Phone:</strong> +1 (507) 448-8190</p>" }
         };
 
         function openModal(docType) {
