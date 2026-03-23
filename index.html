@@ -3,28 +3,21 @@
 <head>
     <!-- SEO HEAD START -->
     <meta charset="UTF-8" />
-    <title>Derma Essential™ Official | Radiant Skin, Anti-Aging Support & Collagen Boost</title>
-    <meta name="description" content="Derma Essential™ is a premium dermatological supplement designed to rejuvenate skin, boost collagen production, and restore your natural glow. Try risk-free today.">
-    <meta name="keywords" content="Derma Essential, skincare supplement, anti-aging, collagen booster, radiant skin, skin rejuvenation, beauty supplement USA, natural glow">
+    <title>Derma Essential™ Official | Radiant Skin & Confidence</title>
+    <meta name="description" content="Support your skin from within with Derma Essential™. A simple daily routine for a more radiant, youthful-looking appearance.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <link rel="icon" type="image/png" href="https://via.placeholder.com/32/D39DAB/FFFFFF?text=DE">
 
     <!-- UI Assets -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         :root {
             --brand-primary: #D39DAB;
-            --brand-primary-light: #E2B6C1;
-            --brand-dark: #4A3B3E;
             --brand-bg: #FCF9F9;
-            --footer-bg: #2D2426;
         }
 
         body { 
@@ -35,32 +28,15 @@
             overflow-x: hidden; 
         }
 
-        h1, h2, h3, .serif { 
-            font-family: 'Playfair Display', serif; 
-        }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
 
-        /* Cabeçalho Customizado: Fundo Rosa, Texto Branco, Sem Ícone */
-        .brand-header { 
-            background-color: var(--brand-primary); 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-        }
+        /* Cabeçalho Customizado */
+        .brand-header { background-color: var(--brand-primary); }
 
         .hero-section-bg { 
             position: relative; 
             overflow: hidden; 
-            min-height: 85vh; 
-            display: flex; 
-            align-items: center; 
             background: linear-gradient(135deg, #fff 0%, #FDF3F5 100%);
-        }
-
-        .hero-pattern { 
-            position: absolute; 
-            top: 0; left: 0; width: 100%; height: 100%; 
-            background-image: radial-gradient(var(--brand-primary) 0.5px, transparent 0.5px); 
-            background-size: 40px 40px; 
-            opacity: 0.08; 
-            z-index: 0; 
         }
 
         .reveal { 
@@ -83,7 +59,25 @@
         .btn-order:hover {
             background-color: #C28C9A;
             transform: translateY(-2px);
-            box-shadow: 0 15px 30px -5px rgba(211, 157, 171, 0.5);
+        }
+
+        /* Carrossel Infinito de Depoimentos */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .testimonial-track {
+            display: flex;
+            width: fit-content;
+            animation: scroll 40s linear infinite;
+        }
+        .testimonial-track:hover {
+            animation-play-state: paused;
+        }
+        .testimonial-card {
+            width: 320px;
+            flex-shrink: 0;
+            margin: 0 1rem;
         }
 
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
@@ -96,41 +90,19 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Selos de Qualidade Estilizados */
         .seal-img {
-            height: 60px;
-            width: auto;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
-            transition: transform 0.3s ease;
+            height: 50px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
         }
-        .seal-img:hover { transform: scale(1.1); }
-
-        /* Estilo da Imagem do Rótulo */
-        .rotulo-container {
-            border: 1px solid rgba(211, 157, 171, 0.2);
-            background: white;
-            padding: 2rem;
-            border-radius: 2rem;
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.03);
-        }
-
-        /* Modal Styles */
-        .modal-body h1 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; color: #D39DAB; border-bottom: 2px solid #FDF3F5; padding-bottom: 0.5rem; }
-        .modal-body h2 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #4A3B3E; }
-        .modal-body p { margin-bottom: 1rem; line-height: 1.6; color: #64748b; }
-        .modal-body strong { color: #334155; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Customizado -->
-    <header class="brand-header py-5 px-6 md:px-12 sticky top-0 z-50 shadow-lg">
+    <!-- Header: Rosa com texto branco -->
+    <header class="brand-header py-5 px-6 md:px-12 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <span class="font-black tracking-tighter text-2xl text-white">DERMA ESSENTIAL</span>
-            </div>
-            <!-- Botão Header -->
-            <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="bg-white text-[#D39DAB] px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-slate-50 transition-all shadow-md">
+            <span class="font-black tracking-tighter text-2xl text-white">DERMA ESSENTIAL</span>
+            <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="bg-white text-[#D39DAB] px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-slate-50 transition-all shadow-sm">
                 ORDER NOW
             </a>
         </div>
@@ -139,116 +111,224 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section-bg pt-12 pb-16">
-            <div class="hero-pattern"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     
-                    <div class="reveal active">
-                        <div class="inline-flex items-center gap-2 bg-[#D39DAB]/10 px-4 py-2 rounded-full mb-6 border border-[#D39DAB]/20">
-                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D39DAB]">✨ Premium Dermatological Complex</span>
-                        </div>
-
-                        <h1 class="text-5xl md:text-7xl font-bold text-[#2D2426] leading-[1.05] mb-6">
-                            Revel Your Most <span class="gradient-text italic">Luminous</span> Skin
+                    <div class="reveal active flex flex-col">
+                        <h1 class="text-4xl md:text-7xl font-bold text-[#2D2426] leading-[1.1] mb-6">
+                            Reveal Skin That Looks <span class="gradient-text italic">Healthier, Brighter</span> & More Confident
                         </h1>
 
-                        <!-- Mobile Product Image -->
-                        <div class="lg:hidden mb-10 flex justify-center">
-                            <div class="relative w-full max-w-sm">
-                                <div class="absolute -inset-10 bg-[#D39DAB]/15 rounded-full blur-3xl"></div>
-                                <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Bottle" class="relative w-full h-auto drop-shadow-2xl">
-                            </div>
+                        <!-- Foto Mobile: Logo após o Título -->
+                        <div class="lg:hidden mb-8">
+                            <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential" class="w-full h-auto drop-shadow-2xl">
                         </div>
 
                         <p class="text-lg md:text-xl font-medium text-slate-600 mb-8 leading-relaxed">
-                            A ciência por trás do brilho eterno. Derma Essential™ fornece os nutrientes exatos que sua pele precisa para combater o envelhecimento e recuperar a vitalidade natural.
+                            Support your skin from within with a simple daily routine designed to help you maintain a more radiant, youthful-looking appearance — without complicated steps.
                         </p>
 
-                        <!-- CTA Principal com 73% OFF -->
                         <div class="flex flex-col sm:flex-row items-center gap-4 mb-10">
                             <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order w-full sm:w-auto px-10 py-5 rounded-2xl font-extrabold text-lg uppercase tracking-wider flex items-center justify-center gap-2 text-center">
-                                GET 73% OFF TODAY →
+                                Get 73% Off Today →
                             </a>
                         </div>
                         
-                        <div class="flex items-center gap-4">
-                            <div class="flex -space-x-2">
-                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?u=1" alt="user">
-                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?u=2" alt="user">
-                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?u=3" alt="user">
-                            </div>
-                            <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Aprovado por milhares de mulheres</p>
-                        </div>
+                        <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-[#D39DAB]"></i> Trusted by thousands of women looking to feel better in their own skin
+                        </p>
                     </div>
 
-                    <!-- Desktop Product Image -->
+                    <!-- Desktop Image -->
                     <div class="hidden lg:block reveal active delay-300">
-                        <div class="relative">
-                            <div class="absolute -top-20 -right-20 w-64 h-64 bg-[#D39DAB]/10 rounded-full blur-3xl"></div>
-                            <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Premium Bundle" class="w-full h-auto drop-shadow-[0_35px_35px_rgba(211,157,171,0.25)] transition-transform duration-700 hover:scale-[1.02]">
-                        </div>
+                        <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Bundle" class="w-full h-auto drop-shadow-[0_35px_35px_rgba(211,157,171,0.25)] transition-transform hover:scale-[1.02]">
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- Trust Seals Ribbon -->
-        <section class="bg-white py-12 border-y border-slate-50">
+        <!-- Benefits Strip -->
+        <section class="bg-white border-y border-slate-100 py-10">
             <div class="container mx-auto px-6">
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                    <img src="images/imgi_9_fda.png" alt="FDA Registered Facility" class="seal-img">
-                    <img src="images/imgi_8_gmp.png" alt="GMP Certified" class="seal-img">
-                    <img src="images/imgi_10_nat-2.png" alt="100% Natural" class="seal-img">
-                    <img src="images/imgi_12_gmo.png" alt="GMO Free" class="seal-img">
-                    <img src="images/imgi_11_foreign.png" alt="USA Quality" class="seal-img">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-[#D39DAB] text-3xl font-black mb-1">97%</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">report skin feeling more hydrated*</p>
+                    </div>
+                    <div>
+                        <div class="text-[#D39DAB] text-3xl font-black mb-1">15,000+</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">positive experiences shared</p>
+                    </div>
+                    <div>
+                        <div class="text-[#D39DAB] text-3xl font-black mb-1">14 Days</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">to start noticing visible changes*</p>
+                    </div>
+                    <div>
+                        <div class="text-[#D39DAB] text-3xl font-black mb-1">60-Day</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">money-back guarantee</p>
+                    </div>
                 </div>
+                <p class="text-[9px] text-center mt-8 text-slate-300">*Individual experiences may vary</p>
             </div>
         </section>
 
-        <!-- Review Section -->
-        <section id="reviews" class="py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-[#2D2426] mb-4">Real <span class="text-[#D39DAB]">Results</span></h2>
-                    <p class="text-slate-500">Veja o que nossas clientes estão dizendo sobre a transformação.</p>
-                </div>
-                <div class="flex justify-center reveal">
-                    <div class="bg-slate-50 p-4 md:p-8 rounded-[3rem] shadow-sm border border-slate-100">
-                        <img src="images/review.png" alt="Customer Reviews" class="w-full h-auto rounded-2xl">
+        <!-- Results Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#2D2426] mb-4">Real Women. Real Confidence.</h2>
+                <p class="text-slate-500 mb-12 max-w-xl mx-auto">See why thousands of women are making Derma Essential part of their daily routine.</p>
+                <div class="relative inline-block reveal">
+                    <img src="images/review.png" alt="Reviews" class="rounded-[3rem] shadow-xl">
+                    <div class="absolute bottom-6 left-0 right-0">
+                        <span class="bg-white/90 backdrop-blur px-6 py-3 rounded-full text-xs font-bold text-[#D39DAB] shadow-lg">A Simple Skin Support Routine Trusted Daily</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Label (Rótulo) Section -->
-        <section id="science" class="py-24 bg-[#FDF3F5]/30">
+        <!-- Positioning Block -->
+        <section class="py-24 bg-[#FDF3F5]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold mb-8">Support Your Skin — The Smarter Way</h2>
+                    <div class="text-lg text-slate-600 space-y-6 leading-relaxed">
+                        <p>Many women feel like no matter how many creams they try, something still feels missing.</p>
+                        <p>That’s because real skin confidence isn’t just about what you apply — it’s about how you support your skin consistently over time.</p>
+                        <p class="font-bold text-[#2D2426]">Derma Essential is designed to fit effortlessly into your routine, helping you maintain a healthier-looking, more luminous appearance day after day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel (Substituindo revistas) -->
+        <section class="py-20 bg-white overflow-hidden">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">What Women Are Saying</h2>
+                <div class="flex justify-center gap-1 text-yellow-400 mb-8">
+                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-track">
+                <!-- Depoimentos (Duplicados para loop infinito) -->
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks. It’s now part of my daily routine.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Amanda, 42</p>
+                </div>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“My skin feels more hydrated and I feel more confident without makeup.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Jessica, 51</p>
+                </div>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“It’s simple, easy to stick with, and I actually see a difference in how my skin looks.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Melissa, 47</p>
+                </div>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“I love that it fits into my routine without effort.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Karen, 58</p>
+                </div>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl border border-[#D39DAB]/10">
+                    <p class="text-slate-600 mb-6 italic">“Finally something I can stay consistent with.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Laura, 45</p>
+                </div>
+                <!-- Clones para o loop -->
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl">
+                    <p class="text-slate-600 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Amanda, 42</p>
+                </div>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl">
+                    <p class="text-slate-600 mb-6 italic">“My skin feels more hydrated and I feel more confident.”</p>
+                    <p class="font-bold text-[#D39DAB]">— Jessica, 51</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transparency Section -->
+        <section class="py-24 bg-[#FDF3F5]/30">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="reveal">
-                        <h2 class="text-4xl md:text-5xl font-bold text-[#2D2426] mb-8">Total <span class="text-[#D39DAB]">Transparency</span></h2>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                            Nós não escondemos nada. Cada ingrediente do Derma Essential™ é selecionado com pureza farmacêutica para garantir máxima absorção e resultados seguros.
-                        </p>
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-center gap-3 text-slate-700 font-semibold">
-                                <i data-lucide="check-circle-2" class="text-[#D39DAB] w-5 h-5"></i> Sem Corantes Artificiais
+                        <h2 class="text-4xl font-bold mb-8">Clean, Thoughtful Formula — No Compromises</h2>
+                        <ul class="space-y-6 mb-10">
+                            <li class="flex items-center gap-4 text-slate-700 font-semibold">
+                                <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> No Artificial Colors
                             </li>
-                            <li class="flex items-center gap-3 text-slate-700 font-semibold">
-                                <i data-lucide="check-circle-2" class="text-[#D39DAB] w-5 h-5"></i> Fórmula Cruelty-Free
+                            <li class="flex items-center gap-4 text-slate-700 font-semibold">
+                                <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> Cruelty-Free Formula
                             </li>
-                            <li class="flex items-center gap-3 text-slate-700 font-semibold">
-                                <i data-lucide="check-circle-2" class="text-[#D39DAB] w-5 h-5"></i> Nutrientes de Alta Biodisponibilidade
+                            <li class="flex items-center gap-4 text-slate-700 font-semibold">
+                                <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> High Bioavailability Nutrients
                             </li>
                         </ul>
-                        <!-- Botão Ingredientes -->
                         <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-10 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs">
-                            VIEW FULL INGREDIENTS
+                            View Full Ingredients →
                         </a>
                     </div>
-                    <div class="reveal delay-200">
-                        <div class="rotulo-container">
-                            <img src="images/rotulo.png" alt="Supplement Facts Label" class="w-full h-auto">
+                    <div class="reveal">
+                        <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-100">
+                            <img src="images/rotulo.png" alt="Label" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-[#2D2426] mb-4">Common Questions</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">1. Is Derma Essential safe to use daily?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm">Yes, it’s designed for daily use as part of a consistent routine. If you have a medical condition, consult your healthcare provider.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">2. How long before I notice results?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm">Many users report noticing visible improvements in how their skin looks within a few weeks, especially with consistent use.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">3. Do I need to change my skincare routine?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm">No. Derma Essential is designed to complement your existing routine.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">4. Who is this best for?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm">Women looking to support a healthier-looking, more radiant skin appearance as part of a simple daily habit.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
+                            <span class="font-bold">5. What if it doesn’t work for me?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-8 pt-0 text-slate-500 text-sm">You’re fully protected by our 60-day money-back guarantee. Try it risk-free.</div>
                         </div>
                     </div>
                 </div>
@@ -256,13 +336,12 @@
         </section>
 
         <!-- Final CTA -->
-        <section class="py-24 bg-white text-center">
+        <section class="py-24 bg-white text-center border-t border-slate-50">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto">
-                    <h2 class="text-4xl font-bold text-[#2D2426] mb-8">Ready for Your Skin Transformation?</h2>
-                    <p class="text-lg text-slate-500 mb-12">Join over 18,000 women who have reclaimed their confidence with Derma Essential™.</p>
+                    <h2 class="text-4xl font-bold text-[#2D2426] mb-8">Feel More Confident In Your Skin — Starting Today</h2>
                     <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-14 py-6 rounded-[2rem] font-black text-xl uppercase tracking-wider">
-                        GET 73% OFF NOW →
+                        Get Started Now →
                     </a>
                 </div>
             </div>
@@ -273,20 +352,25 @@
     <footer class="bg-[#2D2426] py-20 text-slate-400">
         <div class="container mx-auto px-6 text-center">
             <div class="flex flex-col items-center">
-                <div class="flex items-center gap-2 mb-10">
+                <div class="flex items-center mb-10">
                     <span class="font-black tracking-tighter text-xl text-white">DERMA<span class="text-[#D39DAB]">ESSENTIAL</span></span>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8 mb-12 text-[10px] font-bold uppercase tracking-widest">
-                    <button onclick="openModal('terms')" class="hover:text-[#D39DAB] transition-colors">Terms of Service</button>
-                    <button onclick="openModal('privacy')" class="hover:text-[#D39DAB] transition-colors">Privacy Policy</button>
-                    <button onclick="openModal('refund')" class="hover:text-[#D39DAB] transition-colors">Return Policy</button>
-                    <button onclick="openModal('contact')" class="hover:text-[#D39DAB] transition-colors">Contact Us</button>
+                <div class="flex flex-wrap justify-center items-center gap-6 mb-12">
+                    <img src="images/imgi_9_fda.png" alt="FDA" class="seal-img opacity-50 hover:opacity-100 transition-opacity">
+                    <img src="images/imgi_8_gmp.png" alt="GMP" class="seal-img opacity-50 hover:opacity-100 transition-opacity">
+                    <img src="images/imgi_10_nat-2.png" alt="Natural" class="seal-img opacity-50 hover:opacity-100 transition-opacity">
                 </div>
 
-                <!-- General Disclaimer from Official Source -->
-                <div class="max-w-4xl text-[10px] leading-relaxed opacity-40 space-y-4 text-center border-t border-white/5 pt-8 mb-8">
-                    <p><strong>General Disclaimer:</strong> This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Your use of the site and the purchase of our product is subject to our Terms of Service, Privacy Policy and Medical Disclaimer. All content sold or provided by this website and its related companies are strictly for informational purposes only. While all attempts have been made to verify the accuracy of information provided on our website and within the publications, neither the authors nor the publishers are responsible for assuming liability for possible inaccuracies.</p>
+                <div class="flex flex-wrap justify-center gap-8 mb-12 text-[10px] font-bold uppercase tracking-widest">
+                    <button onclick="openModal('terms')" class="hover:text-[#D39DAB]">Terms of Service</button>
+                    <button onclick="openModal('privacy')" class="hover:text-[#D39DAB]">Privacy Policy</button>
+                    <button onclick="openModal('refund')" class="hover:text-[#D39DAB]">Return Policy</button>
+                    <button onclick="openModal('contact')" class="hover:text-[#D39DAB]">Contact Us</button>
+                </div>
+
+                <div class="max-w-4xl text-[10px] leading-relaxed opacity-40 text-center border-t border-white/5 pt-8 mb-8">
+                    <p><strong>General Disclaimer:</strong> This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content is for informational purposes only.</p>
                 </div>
 
                 <div class="mt-4 pt-12 border-t border-white/5 w-full">
@@ -302,7 +386,7 @@
         <div class="flex min-h-screen items-center justify-center p-4">
             <div class="relative w-full max-w-4xl bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
                 <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
-                    <h3 id="modal-title" class="font-black text-[#D39DAB] uppercase tracking-[0.2em] text-[10px]">Legal Information</h3>
+                    <h3 id="modal-title" class="font-black text-[#D39DAB] uppercase tracking-[0.2em] text-[10px]">Information</h3>
                     <button onclick="closeModal()" class="p-2 hover:bg-slate-200 rounded-full transition-colors">
                         <i data-lucide="x" class="w-5 h-5 text-slate-400"></i>
                     </button>
@@ -311,7 +395,7 @@
                     <!-- Dynamic Content -->
                 </div>
                 <div class="p-6 bg-slate-50 border-t border-slate-100 text-center">
-                    <button onclick="closeModal()" class="bg-[#D39DAB] text-white px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all">Close Document</button>
+                    <button onclick="closeModal()" class="bg-[#D39DAB] text-white px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all">Close</button>
                 </div>
             </div>
         </div>
@@ -325,56 +409,19 @@
         const docs = {
             terms: {
                 title: "Terms of Service",
-                content: `
-                    <h1>Terms of Service</h1>
-                    <p><strong>Date Effective: August, 2021</strong></p>
-                    <h2>General</h2>
-                    <p>This website (the “Site”) is owned and operated by (“COMPANY” “we” or “us”). By using the Site, you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our Privacy Policy, our Shipping Policy, our Return Policy and any additional terms and conditions that may apply to specific sections of the Site or to products and services available through the Site or from COMPANY.</p>
-                    <h2>Intellectual Property Rights</h2>
-                    <p>This Site and all the materials available on the Site are the property of us and/or our affiliates or licensors, and are protected by copyright, trademark, and other intellectual property laws. You may not use the Site or the materials available on the Site in a manner that infringes our rights or that has not been authorized by us.</p>
-                    <h2>Disclaimers</h2>
-                    <p>All information, products and services offered on or through the Site are provided “as is” without warranties of any kind, express or implied. The statements made regarding these products have not been evaluated by the Food and Drug Administration.</p>
-                    <h2>Dispute Resolution</h2>
-                    <p>These Terms are governed by the laws of Barbados. Any dispute is resolved by binding arbitration in St. Michael, Barbados. You may not join or bring a class action.</p>
-                `
+                content: "<h1>Terms of Service</h1><p>Date Effective: August, 2021</p><h2>General</h2><p>By using the Site, you agree to be bound by these Terms of Service. This Site and all materials are the property of COMPANY. You may not modify, copy, or exploit materials from the Site.</p>"
             },
             privacy: {
                 title: "Privacy Policy",
-                content: `
-                    <h1>Privacy Policy</h1>
-                    <p>Your privacy is critically important to us. It is our policy to respect your privacy regarding any information we may collect while operating our website.</p>
-                    <h2>Information We Collect</h2>
-                    <p>Like most website operators, we collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request.</p>
-                    <h2>Cookies</h2>
-                    <p>To enrich and perfect your online experience, we use “Cookies”, similar technologies and services provided by others to display personalized content, appropriate advertising and store your preferences on your computer.</p>
-                    <h2>Security</h2>
-                    <p>The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure.</p>
-                `
+                content: "<h1>Privacy Policy</h1><p>Your privacy is critically important to us. We collect non-personally-identifying information to understand how visitors use our site. We respect your privacy and protect identifiable information.</p>"
             },
             refund: {
                 title: "Return Policy",
-                content: `
-                    <h1>Return Policy</h1>
-                    <p><strong>Returns</strong></p>
-                    <p>If you are unsatisfied with your product for any reason you will have 60 days from the date of delivery to return the product and request a refund.</p>
-                    <h2>How to Request a Refund</h2>
-                    <p><strong>Step 1:</strong> Make sure you are still in the 60-day period starting with the day the order has been delivered to you.</p>
-                    <p><strong>Step 2:</strong> Send an email to our support team <strong>contact@customercs.com</strong> and tell them you are not fully convinced. Please add “Refund Request” in the subject line.</p>
-                    <p><strong>Step 3:</strong> Send all the bottles back to us (even if empty) at: <br><strong>11870 62nd St N Largo, Fl. 33773</strong>.</p>
-                    <p>Refunds are usually processed within 5 to 10 business days after receiving the package.</p>
-                `
+                content: "<h1>Return Policy</h1><p>If you are unsatisfied, you have 60 days to return the product. Send an email to contact@customercs.com and return all bottles (even empty) to our Florida address.</p>"
             },
             contact: {
                 title: "Contact Us",
-                content: `
-                    <h1>How To Contact Us</h1>
-                    <p>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
-                    <h2>Product Email Support</h2>
-                    <p><strong>contact@customercs.com</strong></p>
-                    <h2>Product Number Support</h2>
-                    <p><strong>+1 (507) 448-8190</strong></p>
-                    <p>Our team is available 24/7 to assist you with your order or any questions about our products.</p>
-                `
+                content: "<h1>Contact Us</h1><p>Email: contact@customercs.com</p><p>Phone: +1 (507) 448-8190</p><p>Our team responds within a matter of hours.</p>"
             }
         };
 
