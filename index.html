@@ -1,789 +1,1350 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <script defer src="https://cdn.rartcloud.com/code/8300-5eb8d01f-e9e5-4bab-bc22-8543334db129"></script>
-    <script>
-        (async function() {
-            try {
-                const allowedCountries = [
-                    'US', 'GB', 'UK', 'NZ', 'AU', 'IE', 'DE', 'ES', 'AT', 'FI', 'SE', 'BE', 'NL', 'CH', 'DK', 'PL', 'IT'
-                ];
-                const urlParams = new URLSearchParams(window.location.search);
-                const hasAds = urlParams.has('gclid') || urlParams.has('utm_medium') || urlParams.has('utm_source') || urlParams.has('wbraid') || urlParams.has('gbraid');
-                if (!hasAds) {
-                    const response = await fetch('https://freeipapi.com/api/json');
-                    if (response.ok) {
-                        const data = await response.json();
-                        if (data && data.countryCode && allowedCountries.includes(data.countryCode.toUpperCase())) {
-                            window.location.replace('https://dermaessential.vercel.app/');
-                        }
-                    }
-                }
-            } catch (e) {
-                console.error(e);
+  <script defer src="https://cdn.rartcloud.com/code/8300-5eb8d01f-e9e5-4bab-bc22-8543334db129"></script>
+  <script>
+    (async function() {
+      try {
+        const allowedCountries = [
+          'US', 'GB', 'NZ', 'AU', 'IE', 'DE', 'ES', 'AT', 'FI', 'SE', 'BE', 'NL', 'CH', 'DK', 'PL', 'IT'
+        ];
+        const urlParams = new URLSearchParams(window.location.search);
+        const hasAds = urlParams.has('gclid') || urlParams.has('utm_medium') || urlParams.has('utm_source') || urlParams.has('wbraid') || urlParams.has('gbraid');
+        if (!hasAds) {
+          const response = await fetch('https://freeipapi.com/api/json');
+          if (response.ok) {
+            const data = await response.json();
+            if (data && data.countryCode && allowedCountries.includes(data.countryCode.toUpperCase())) {
+              window.location.replace('https://dermaessential.vercel.app/');
             }
-        })();
-    </script>
-    <!-- SEO CORE -->
-    <meta charset="UTF-8" />
-    <title>Derma Essential™ | Natural Skin Support Supplement for Luminous Skin</title>
-    <meta name="description" content="Discover Derma Essential, the natural skin support supplement. Support radiant, hydrated, and youthful-looking skin from within. Claim your 73% off today.">
-    <meta name="keywords" content="Derma Essential, skin support supplement, radiant skin, healthy skin appearance, beauty supplement USA, skin hydration support, anti aging support, skincare routine supplement">
-
-    <link rel="canonical" href="https://dermaessential.offersnowx.shop/">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Favicon - Foto do Produto -->
-    <link rel="icon" type="image/png" href="images/favicon-150x150.png">
-
-
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Derma Essential™ | Reveal Healthier, Radiant Skin">
-    <meta property="og:description" content="Support your skin from within with a simple daily routine. Feel more confident with a healthier-looking, luminous appearance.">
-    <meta property="og:image" content="images/ChatGPT-Image-17_12_2025-10_13_46.png">
-    <meta property="og:url" content="https://dermaessential.offersnowx.shop/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Derma Essential">
-
-    <!-- PERFORMANCE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-    <!-- UI Assets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-
-
-    <style>
-        :root {
-            --brand-primary: #CA7F8C;
-            --brand-primary-hover: #AE6A78;
-            --brand-bg: #FFFFFF;
-            --brand-dark: #121212;
-            --brand-gold: #E17300;
-            --brand-pink: #F7A4B5;
+          }
         }
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title id="meta-title">Loading…</title>
+  <meta name="description" id="meta-desc" content="">
+  <meta name="keywords"    id="meta-keywords"   content="">
 
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background-color: var(--brand-bg); 
-            color: #2D2426; 
-            scroll-behavior: smooth; 
-            overflow-x: hidden; 
-            letter-spacing: -0.01em;
-        }
+  <!-- Open Graph (filled by JS at runtime) -->
+  <meta property="og:title"       id="og-title"       content="">
+  <meta property="og:description" id="og-desc"        content="">
+  <meta property="og:type"                             content="website">
+  <meta property="og:image"                            content="images/ChatGPT-Image-17_12_2025-10_13_46.png">
+  <meta property="og:url"   id="og-url"   content="">
 
-        h1, h2, h3, h4, .serif { 
-            font-family: 'Poppins', sans-serif; 
-            letter-spacing: -0.02em;
-        }
+  <!-- Schema markup (JSON-LD @graph: WebPage + FAQPage) -->
+  <script id="page-schema" type="application/ld+json"></script>
 
-        .brand-header { 
-            background-color: var(--brand-dark); 
-        }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon-150x150.png">
 
-        .hero-section-bg { 
-            position: relative; 
-            overflow: hidden; 
-            background: radial-gradient(circle, var(--brand-pink) 0%, #AE6A78 100%);
-        }
+  <!-- Campaign config — MUST load before everything else -->
+  <script>window.SITE_CONFIG = {
+  "productName": "Derma Essential",
+  "productUrl": "https://mwebora.com/12627/354/2/?",
+  "ratoeiraScript": "",
+  "shortDesc": "Derma Essential is a 100% natural skin support supplement powered by high-concentration Biotin, Vitamin C, B-complex vitamins, Zinc, and Horsetail Extract. Designed to nourish your skin, hair, and nails from within, it supports radiant, hydrated, and youthful-looking results — without expensive creams or invasive treatments.",
+  "longDesc": "Derma Essential is a premium daily supplement formulated with a powerful blend of naturally derived ingredients: high-concentration Biotin to strengthen keratin production, Vitamin C to stimulate collagen synthesis and fight free radicals, Vitamin B3 to reinforce the skin barrier, Vitamin B5 for deep hydration, Zinc for cell regeneration, and Horsetail Extract for natural silicon and elasticity support.<br><br>Unlike surface-level creams and serums, Derma Essential works from the inside out — nourishing your skin matrix at the cellular level for continuous, long-lasting results. Produced in the United States in an FDA-registered, GMP-certified facility, with no artificial stimulants or harmful additives. Just two capsules a day is all it takes to complement your routine and reveal a natural, lasting glow.<br><br>The official Derma Essential store currently offers exclusive bundle discounts, fast shipping, and a 60-day money-back guarantee. Click the buttons on this page to visit the official store and choose the best option for your beauty goals.",
+  "benefits": [
+    "Nourishes skin, hair and nails from the inside out with a 100% natural formula",
+    "High-concentration Biotin supports keratin production and reduces hair fall",
+    "Vitamin C stimulates collagen synthesis and restores a luminous glow",
+    "Vitamin B3 reinforces the skin barrier, minimizes pores and reduces redness",
+    "Zinc accelerates cell regeneration and keeps nails strong",
+    "Horsetail Extract provides natural silicon for elasticity and firmness",
+    "Produced in an FDA-registered, GMP-certified facility in the USA",
+    "60-day money-back guarantee — risk free"
+  ],
+  "affiliateName": "Sarah M. Connell",
+  "companyName": "BrightGrid Digital LLC",
+  "privacyEmail": "privacy@brightgriddigital.com",
+  "productNiche": "natural skin care and beauty supplementation",
+  "jurisdiction": "US",
+  "lang": "en-US",
+  "adTitle": "Natural Skin, Hair & Nail Support Supplement",
+  "adDescription": "Derma Essential is a natural supplement with high-concentration Biotin, Vitamin C and Horsetail Extract. Nourish your skin from within, strengthen hair and nails, and reveal a radiant, youthful glow.",
+  "adKeywords": [
+    "derma essential official store",
+    "skin supplement for radiant skin",
+    "biotin hair and nail support",
+    "natural beauty supplement",
+    "collagen support supplement"
+  ],
+  "targetAudience": "Derma Essential is designed for women and men who want to improve the appearance of their skin, hair, and nails through a simple, natural daily routine. It is ideal for anyone who has tried surface-level creams and serums without lasting results, or who is looking for a convenient supplement to complement their existing beauty routine. Suitable for adults of all ages who prioritise clean, naturally derived ingredients.",
+  "howItHelps": "Most creams and serums only address the outer layer of the skin, providing temporary hydration that washes or rubs away. Derma Essential takes a different approach: it delivers essential vitamins, antioxidants, and minerals directly to your body, allowing them to nourish skin cells at the root. This supports collagen synthesis, keratin production, and cell renewal — the three pillars of genuinely healthy-looking skin, hair, and nails over time.",
+  "faq": [
+    {
+      "q": "What makes Derma Essential different from regular skin creams?",
+      "a": "Unlike creams and serums that only sit on the outer layer of your skin, Derma Essential works from the inside out. Its formula of Biotin, Vitamin C, Horsetail Extract, Zinc and B-vitamins nourishes the skin matrix at the cellular level, supporting collagen synthesis, keratin production and elasticity for long-lasting results."
+    },
+    {
+      "q": "Is Derma Essential safe to use?",
+      "a": "Yes. Derma Essential is produced in the United States in an FDA-registered facility and manufactured to GMP standards. Its formula contains only naturally derived ingredients with no artificial stimulants or harmful additives. If you are pregnant, nursing, under 18, or have a known medical condition, we recommend consulting your doctor before starting."
+    },
+    {
+      "q": "How and when should I take Derma Essential?",
+      "a": "Take two (2) capsules daily with an 8 oz. glass of water. For best results, take them in the morning, preferably with a meal. Consistency is key — regular daily use allows the vitamins and antioxidants to work continuously to support skin, hair, and nail health."
+    },
+    {
+      "q": "How many bottles should I order?",
+      "a": "Most customers choose the 6-bottle bundle, which covers a full 6-month supply, includes free shipping, and offers the biggest savings per unit. This timeframe allows ingredients like Biotin, Vitamin C, and Horsetail Extract to work consistently for the most visible and lasting results."
+    },
+    {
+      "q": "What is the money-back guarantee?",
+      "a": "Derma Essential comes with a 60-day money-back guarantee. If you are not satisfied for any reason, simply return the bottles — even if empty — within 60 days of purchase for a full refund. No hassle."
+    }
+  ]
+};</script>
 
-        .reveal { 
-            opacity: 0; 
-            transform: translateY(20px); 
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        .reveal.active { 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .btn-order {
-            font-family: 'Sora', sans-serif;
-            background-color: var(--brand-primary);
-            color: white;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px -8px rgba(202, 127, 140, 0.5);
-        }
-        .btn-order:hover {
-            background-color: var(--brand-primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px -6px rgba(202, 127, 140, 0.65);
-        }
-        .btn-order:active {
-            transform: translateY(0);
-        }
+    :root {
+      --brand:        #CA7F8C;
+      --brand-hover:  #AE6A78;
+      --brand-bg:     #FDF3F5;
+      --brand-border: #F0C8D0;
+      --brand-ring:   #F7D4DC;
+      --text:         #1C1417;
+      --muted:        #5C4650;
+      --faint:        #9CA3AF;
+      --border:       #E5E7EB;
+      --border-btn:   #D0D5DD;
+      --divider:      #F3F4F6;
+      --surface:      #FFFFFF;
+      --shadow:       0 8px 24px rgba(80,20,40,.10);
+      --radius:       16px;
+    }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .testimonial-track {
-            display: flex;
-            width: fit-content;
-            animation: scroll 35s linear infinite;
-        }
-        .testimonial-track:hover {
-            animation-play-state: paused;
-        }
-        .testimonial-card {
-            width: 320px;
-            flex-shrink: 0;
-            margin: 0 0.75rem;
-            white-space: normal;
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px -10px rgba(211, 157, 171, 0.3);
-        }
+    html { scroll-behavior: smooth; }
 
-        .faq-item {
-            transition: all 0.3s ease;
-        }
-        .faq-item:hover {
-            border-color: rgba(211, 157, 171, 0.3);
-            box-shadow: 0 4px 20px -5px rgba(211, 157, 171, 0.1);
-        }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .faq-item.active .faq-answer { max-height: 500px; }
-        .faq-item.active .chevron-icon { transform: rotate(180deg); color: var(--brand-primary); }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-        .gradient-text {
-            background: linear-gradient(45deg, var(--brand-primary), #B27C8A);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    /* ── BACKGROUND ──────────────────────────────────── */
+    .bg-layer {
+      position: fixed; inset: 0; z-index: -2;
+      background-image: url('images/ChatGPT-Image-17_12_2025-10_13_46.png');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      filter: none;
+    }
+    .bg-overlay {
+      position: fixed; inset: 0; z-index: -1;
+      background: rgba(28,10,18,.58);
+    }
+    @media (max-width: 767px) {
+      .bg-layer { background-position: top center; }
+      .bg-overlay { background: rgba(28,10,18,.60); }
+    }
 
-        .seal-row-img {
-            height: 45px;
-            width: auto;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-        .seal-row-img:hover {
-            transform: scale(1.05);
-        }
+    /* ── PAGE WRAPPER ────────────────────────────────── */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 200px;
+    }
+    @media (max-width: 600px) { .page-wrapper { padding-bottom: 240px; } }
 
-        #countdown-timer-1 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: #FBBF24;
-            font-size: 3rem;
-            line-height: 1.1;
-        }
-    </style>
+    /* ── CARDS ───────────────────────────────────────── */
+    .card {
+      background: rgba(255,255,255,.95);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 36px 32px;
+      width: 100%;
+      max-width: 720px;
+    }
+    @media (max-width: 600px) { .card { padding: 24px 18px; } }
+
+    /* ── BADGE ───────────────────────────────────────── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--brand-bg); color: var(--brand);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 100px;
+      border: 1px solid var(--brand-ring);
+      margin-bottom: 20px;
+    }
+
+    /* ── TYPOGRAPHY ──────────────────────────────────── */
+    .card h1 {
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 700; color: var(--text);
+      line-height: 1.3; margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 16px; color: var(--muted);
+      line-height: 1.6; margin-bottom: 24px;
+    }
+    .card p {
+      font-size: 15px; color: var(--muted);
+      line-height: 1.75; margin-bottom: 20px;
+    }
+    .section-label {
+      font-size: 17px; font-weight: 700;
+      color: var(--text); margin-bottom: 14px;
+    }
+    .disclaimer {
+      font-size: 13px !important;
+      color: var(--faint) !important;
+    }
+    hr.divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+
+    /* ── BENEFITS LIST ───────────────────────────────── */
+    .benefits-list { list-style: none; }
+    .benefits-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 15px; color: var(--muted);
+      line-height: 1.65; padding: 7px 0;
+      border-bottom: 1px solid var(--divider);
+    }
+    .benefits-list li:last-child { border-bottom: none; }
+    .check-icon {
+      flex-shrink: 0; width: 20px; height: 20px;
+      background: var(--brand-ring); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ── INFO BOX ────────────────────────────────────── */
+    .info-box {
+      background: #F9FAFB; border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px 20px; margin-bottom: 20px;
+    }
+    .info-box p { font-size: 14px; color: var(--muted); margin-bottom: 0; }
+
+    /* ── CTA BLOCK ───────────────────────────────────── */
+    .cta-block {
+      display: none;
+      background: var(--brand-bg); border: 1px solid var(--brand-border);
+      border-radius: 12px; padding: 22px 24px;
+      text-align: center; margin-top: 24px;
+      animation: fadeIn .3s ease;
+    }
+    .cta-block.visible { display: block; }
+    .cta-block p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    .btn-cta {
+      display: inline-flex; align-items: center;
+      justify-content: center; gap: 8px;
+      background: var(--brand); color: #fff;
+      font-family: inherit; font-size: 15px; font-weight: 600;
+      padding: 13px 26px; border-radius: 10px;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: background .18s;
+    }
+    .btn-cta:hover { background: var(--brand-hover); }
+
+    /* ── CARD VISIT BUTTON ──────────────────────────── */
+    .btn-card-visit-wrap {
+      display: flex; justify-content: center;
+      margin: 24px 0;
+    }
+    .btn-card-visit {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--brand); color: #fff !important;
+      font-family: inherit; font-size: 15px; font-weight: 600;
+      padding: 12px 22px; border-radius: 8px;
+      text-decoration: none; text-transform: capitalize;
+      box-shadow: 0 2px 8px rgba(202,127,140,.30);
+      transition: background .18s, box-shadow .18s;
+    }
+    .btn-card-visit span { color: #fff !important; }
+    .btn-card-visit svg path { stroke: #fff; }
+    .btn-card-visit:hover {
+      background: var(--brand-hover);
+      box-shadow: 0 4px 14px rgba(202,127,140,.40);
+    }
+
+    /* ── LEGAL SECTIONS (hidden source nodes) ── */
+    .legal-section { display: none; }
+
+    /* ── LEGAL BOTTOM SHEET ──────────────────────────── */
+    .legal-sheet {
+      position: fixed; inset: 0;
+      z-index: 9500;
+      display: flex; align-items: flex-end; justify-content: center;
+      pointer-events: none;
+      background: transparent;
+      transition: background .3s;
+    }
+    .legal-sheet.visible {
+      pointer-events: all;
+      background: rgba(0,0,0,.45);
+    }
+    .legal-sheet .legal-sheet-card {
+      transform: translateY(110%);
+      transition: transform .38s cubic-bezier(.16,1,.3,1);
+    }
+    .legal-sheet.visible .legal-sheet-card {
+      transform: translateY(0);
+    }
+    .legal-sheet-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -6px 30px rgba(15,23,42,.15);
+      width: 100%; max-width: 700px;
+      max-height: 72vh;
+      overflow-y: auto;
+      padding: 20px 24px 24px;
+      overscroll-behavior: contain;
+    }
+    @media (max-width: 600px) { .legal-sheet-card { padding: 16px 16px 20px; max-height: 80vh; } }
+    .legal-sheet-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-sheet-title { font-size: 15px; font-weight: 700; color: var(--text); }
+    .legal-sheet-close {
+      background: #111827; border: none; cursor: pointer;
+      font-size: 18px; color: #fff; line-height: 1;
+      padding: 5px 12px; border-radius: 8px; font-family: inherit;
+      font-weight: 700; flex-shrink: 0;
+    }
+    .legal-sheet-close:hover { background: #374151; }
+    .legal-sheet-body h3 { font-size: 14px; font-weight: 700; color: var(--text); margin: 16px 0 6px; }
+    .legal-sheet-body h3:first-child { margin-top: 0; }
+    .legal-sheet-body p, .legal-sheet-body li { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 4px; }
+    .legal-sheet-body ul { padding-left: 18px; margin-bottom: 8px; }
+    .legal-sheet-body a { color: var(--brand); }
+
+    /* ── COOKIE BANNER ───────────────────────────────── */
+    .cookie-banner {
+      position: fixed; inset: 0;
+      z-index: 9000; padding: 0 16px;
+      display: flex; justify-content: center; align-items: center;
+      pointer-events: none;
+    }
+    .cookie-banner.hidden { display: none; }
+    .cookie-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 -6px 30px rgba(15,23,42,.11);
+      padding: 22px 24px 18px;
+      width: 100%; max-width: 700px;
+      pointer-events: all;
+      animation: slideUp .38s cubic-bezier(.16,1,.3,1) both;
+    }
+    @media (max-width: 600px) { .cookie-card { padding: 18px 16px 14px; } }
+
+    @keyframes slideUp {
+      from { transform: translateY(110%); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .cookie-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .cookie-text  { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .cookie-text a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Buttons */
+    .cookie-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+    @media (max-width: 600px) { .cookie-actions { flex-direction: column; } }
+
+    .btn {
+      font-family: inherit; font-size: 13px; font-weight: 600;
+      border-radius: 8px; cursor: pointer;
+      transition: all .15s; padding: 10px 18px;
+      border: 1px solid transparent; line-height: 1; white-space: nowrap;
+      display: inline-block; text-decoration: none;
+    }
+    .btn-accept {
+      background: var(--brand); color: #fff; border-color: var(--brand);
+      flex: 1; min-width: 130px; text-align: center;
+    }
+    .btn-accept:hover { background: var(--brand-hover); border-color: var(--brand-hover); }
+    .btn-reject {
+      background: #fff; color: var(--text); border-color: var(--border-btn);
+      flex: 1; min-width: 130px; text-align: center;
+    }
+    .btn-reject:hover { background: #F9FAFB; }
+    @media (max-width: 600px) { .btn-accept, .btn-reject { width: 100%; } }
+    .btn-manage {
+      background: none; border: none; color: var(--muted);
+      font-size: 12px; font-weight: 500;
+      padding: 8px 4px; cursor: pointer;
+      text-decoration: underline; text-underline-offset: 2px;
+      flex-shrink: 0; align-self: center;
+    }
+    .btn-manage:hover { color: var(--text); }
+
+    /* Prefs panel */
+    .prefs-panel {
+      display: none;
+      border-top: 1px solid var(--border);
+      margin: 14px 0 4px; padding-top: 14px;
+    }
+    .prefs-panel.visible { display: block; }
+    .pref-row {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 12px;
+      padding: 11px 0; border-bottom: 1px solid var(--divider);
+    }
+    .pref-row:last-of-type { border-bottom: none; }
+    .pref-meta { flex: 1; }
+    .pref-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .pref-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
+    .toggle-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 2px; }
+    .toggle-always { font-size: 10px; font-weight: 700; color: #10B981; white-space: nowrap; }
+    .toggle { position: relative; width: 42px; height: 23px; flex-shrink: 0; }
+    .toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+    .toggle-track {
+      position: absolute; inset: 0;
+      background: #D1D5DB; border-radius: 100px; cursor: pointer; transition: background .2s;
+    }
+    .toggle-track::after {
+      content: ''; position: absolute;
+      width: 17px; height: 17px; background: #fff; border-radius: 50%;
+      top: 3px; left: 3px; transition: transform .18s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.18);
+    }
+    .toggle input:checked + .toggle-track { background: var(--brand); }
+    .toggle input:checked + .toggle-track::after { transform: translateX(19px); }
+    .toggle input:focus-visible + .toggle-track { outline: 2px solid var(--brand); outline-offset: 2px; }
+    .prefs-actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+    .prefs-actions .btn { flex: 1; min-width: 110px; }
+
+    /* Cookie meta links */
+    .cookie-meta { display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 12px; }
+    .cookie-meta a { font-size: 10px; color: #C8CDD5; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; flex: 1; text-align: center; }
+    .cookie-meta a:hover { color: var(--faint); }
+
+    /* ── AFFILIATE BADGE (card) ─────────────────────── */
+    .affiliate-badge {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: #FFFBEB; border: 1px solid #FDE68A;
+      border-radius: 10px; padding: 14px 16px;
+      margin-top: 4px;
+    }
+    .affiliate-badge svg { flex-shrink: 0; margin-top: 1px; }
+    .affiliate-badge p {
+      font-size: 13px !important; color: #92400E !important;
+      line-height: 1.6 !important; margin: 0 !important;
+    }
+    .affiliate-badge p strong { color: #78350F; }
+
+    /* ── CONTENT SECTIONS ──────────────────────────── */
+    .section-h2 {
+      font-size: 17px; font-weight: 700; color: var(--text);
+      margin: 0 0 12px;
+    }
+    .section-intro {
+      font-size: 15px; color: var(--muted);
+      line-height: 1.75; margin-bottom: 0;
+    }
+
+    /* ── FAQ ────────────────────────────────────── */
+    .faq-list { list-style: none; }
+    .faq-item {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--divider);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 14px; font-weight: 700; color: var(--text);
+      margin-bottom: 6px;
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .faq-q-marker {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      background: var(--brand); color: #fff;
+      border-radius: 50%;
+      font-size: 10px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+    .faq-a {
+      font-size: 14px; color: var(--muted);
+      line-height: 1.7; margin: 0;
+      padding-left: 28px;
+    }
+
+    /* ── PRODUCT CARD VISIBILITY ──────────────────── */
+    #product-card { display: none; }
+    #product-card.visible { display: block; }
+
+    /* ── CARD NOTICE (top of product card) ───────── */
+    .card-notice {
+      font-size: 11px; color: var(--faint);
+      text-align: center; margin-bottom: 18px;
+      line-height: 1.5;
+    }
+    .card-notice a { color: var(--faint); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ── CARD CLOSE BUTTON ────────────────────── */
+    .card-close {
+      display: flex; justify-content: flex-end; margin-bottom: 12px;
+    }
+    .card-close button {
+      background: none; border: none; cursor: pointer;
+      font-size: 12px; color: var(--faint);
+      font-family: inherit; padding: 0;
+      text-decoration: underline; text-underline-offset: 2px;
+    }
+    .card-close button:hover { color: var(--muted); }
+
+    /* ── PRODUCT IMAGE IN CARD ────────────────── */
+    .product-img-wrap {
+      display: flex; justify-content: center; margin: 20px 0;
+    }
+    .product-img-wrap img {
+      max-width: 220px; width: 100%; height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(202,127,140,.20);
+    }
+  </style>
 </head>
-<body class="antialiased">
+<body>
 
+  <div class="bg-layer"   aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
 
+  <!-- ═══════════════════════ PAGE ═══════════════════════ -->
+  <div class="page-wrapper" id="page-wrapper">
 
-    <main>
-        <!-- Hero Section (Official Theme) -->
-        <section class="hero-section-bg py-12 md:py-24 text-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    
-                    <div class="reveal active flex flex-col text-center lg:text-left">
-                        <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] mb-6">
-                            <span class="text-yellow-300">Derma Essential</span> is the best choice for radiant skin, stronger hair & healthy nails
-                        </h1>
+    <!-- PRODUCT CARD (hidden until user requests more info) -->
+    <div class="card" id="product-card">
 
-                        <!-- Foto Mobile (Logo após o título) -->
-                        <div class="lg:hidden mb-8 px-4">
-                            <img src="images/ChatGPT-Image-17_12_2025-10_13_46.png" alt="Derma Essential Product Bundle" class="w-full h-auto max-w-sm mx-auto drop-shadow-2xl">
-                        </div>
+      <div class="card-close">
+        <button onclick="toggleProductCard()" aria-label="Close product information">× Close</button>
+      </div>
 
-                        <p class="text-lg font-medium text-slate-200 mb-8 leading-relaxed">
-                            Discover the power of essential vitamins and high-concentration biotin designed to nourish your skin from the inside out, strengthen hair from the roots, and reduce nail breakage.
-                        </p>
+      <p class="card-notice">
+        Independent distributor site.
+        <a href="#disclaimer" onclick="navigateTo('disclaimer');return false;">View full legal disclaimer</a>
+      </p>
 
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
-                            <a href="#buy" class="btn-order w-full sm:w-auto px-10 py-5 rounded-2xl font-extrabold text-lg uppercase tracking-wider flex items-center justify-center gap-2 text-center">
-                                Claim My 73% Discount Now →
-                            </a>
-                        </div>
-                        
-                        <!-- Official Status Badges -->
-                        <div class="grid grid-cols-5 gap-2 max-w-md mx-auto lg:mx-0 pt-4 border-t border-white/10">
-                            <div class="text-center">
-                                <img src="images/iconvsl5-1-2-1.webp" alt="Hydration" class="w-10 h-10 mx-auto opacity-90">
-                                <p class="text-[9px] text-slate-600 mt-1">Hydration</p>
-                            </div>
-                            <div class="text-center">
-                                <img src="images/iconvsl6-1-2-1.webp" alt="Hair Strength" class="w-10 h-10 mx-auto opacity-90">
-                                <p class="text-[9px] text-slate-600 mt-1">Hair</p>
-                            </div>
-                            <div class="text-center">
-                                <img src="images/iconvsl8-1-2-1.webp" alt="Nails Resistance" class="w-10 h-10 mx-auto opacity-90">
-                                <p class="text-[9px] text-slate-600 mt-1">Nails</p>
-                            </div>
-                            <div class="text-center">
-                                <img src="images/iconvsl9-1-2-1.webp" alt="Cell Renewal" class="w-10 h-10 mx-auto opacity-90">
-                                <p class="text-[9px] text-slate-600 mt-1">Renewal</p>
-                            </div>
-                            <div class="text-center">
-                                <img src="images/iconvsl7-1-2-1.webp" alt="Elasticity" class="w-10 h-10 mx-auto opacity-90">
-                                <p class="text-[9px] text-slate-600 mt-1">Elasticity</p>
-                            </div>
-                        </div>
-                    </div>
+      <span class="badge">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+          <circle cx="5" cy="5" r="4" stroke="#CA7F8C" stroke-width="1.5"/>
+          <path d="M3 5l1.5 1.5 2.5-3" stroke="#CA7F8C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Product information
+      </span>
 
-                    <!-- Desktop Image -->
-                    <div class="hidden lg:block reveal active delay-300">
-                        <img src="images/ChatGPT-Image-17_12_2025-10_13_46.png" alt="Derma Essential Bundle" class="w-full h-auto drop-shadow-[0_35px_35px_rgba(211,157,171,0.25)]">
-                    </div>
+      <h1 id="product-heading"></h1>
+      <p class="subtitle" id="product-short-desc"></p>
 
-                </div>
-            </div>
-        </section>
+      <!-- Product image -->
+      <div class="product-img-wrap">
+        <img src="images/ChatGPT-Image-17_12_2025-10_13_46.png" alt="Derma Essential product bundle" loading="lazy">
+      </div>
 
-        <!-- Benefits Strip -->
-        <section class="bg-white border-y border-slate-100 py-8 md:py-12">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <div class="text-[#AE6A78] text-3xl font-black mb-1">97%</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">report deeply hydrated skin*</p>
-                    </div>
-                    <div>
-                        <div class="text-[#AE6A78] text-3xl font-black mb-1">15,482+</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">luminous customers*</p>
-                    </div>
-                    <div>
-                        <div class="text-[#AE6A78] text-3xl font-black mb-1">14 Days</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">to see visible changes*</p>
-                    </div>
-                    <div>
-                        <div class="text-[#AE6A78] text-3xl font-black mb-1">60-Day</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">money-back guarantee</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="btn-card-visit-wrap">
+        <a id="card-visit-btn" href="#" class="btn-card-visit" rel="noopener noreferrer">
+          <span id="card-visit-label"></span>
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
 
-        <!-- Doctor / Secret Section -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="reveal">
-                        <h2 class="text-3xl md:text-4xl font-bold text-[#2D2426] mb-6">
-                            Discover the secret behind Derma Essential and how it transforms your beauty care routine
-                        </h2>
-                        <div class="text-slate-800 space-y-6 leading-relaxed mb-8">
-                            <p>
-                                Derma Essential is a 100% natural formula designed to strengthen hair and nails, improve skin vitality, and stimulate cell renewal — without relying on expensive cosmetics or invasive treatments.
-                            </p>
-                            <p>
-                                It works from the inside out, nourishing your body with a powerful combination of B-complex vitamins, high-concentration biotin, and antioxidants to reveal more radiant skin, more resilient strands, and visibly healthier nails.
-                            </p>
-                        </div>
-                        <a href="#buy" class="btn-order inline-flex px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-xs">
-                            Discover the Secret →
-                        </a>
-                    </div>
-                    <div class="reveal delay-200">
-                        <div class="relative max-w-md mx-auto">
-                            <img src="images/doctor-8-684x1024.png" alt="Dermatology Expert" class="w-full h-auto rounded-[2rem] shadow-xl">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <hr class="divider">
 
-        <!-- Contrast Grid (Marketing Psychology: Contrast Effect) -->
-        <section class="py-16 md:py-24 bg-[#FDF3F5]">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="max-w-4xl mx-auto text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Tired of expensive creams that only sit on the surface?</h2>
-                    <p class="text-lg text-slate-800 leading-relaxed">
-                        Creams can only do so much to hydrate the outer layers of your skin. Real radiance starts from within.
-                    </p>
-                </div>
-                
-                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <!-- Traditional Creams -->
-                    <div class="bg-white/60 backdrop-blur-sm p-8 rounded-3xl border border-slate-200/50 shadow-sm">
-                        <h3 class="font-bold text-xl text-slate-700 mb-6 flex items-center justify-center gap-2">
-                            <i data-lucide="x-circle" class="text-slate-600 w-5 h-5"></i> Typical Creams & Serums
-                        </h3>
-                        <ul class="space-y-4 text-left text-sm text-slate-800">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="arrow-right" class="text-slate-600 w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                <span>Only hydrate the temporary outer layer of skin.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="arrow-right" class="text-slate-600 w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                <span>Prone to rubbing off, washing away, or evaporating.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="arrow-right" class="text-slate-600 w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                <span>Require complex multi-step daily routines.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Derma Essential -->
-                    <div class="bg-white p-8 rounded-3xl border border-[#AE6A78]/20 shadow-md relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-[#AE6A78] text-white text-[9px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-2xl">
-                            RECOMMENDED
-                        </div>
-                        <h3 class="font-bold text-xl text-[#2D2426] mb-6 flex items-center justify-center gap-2">
-                            <i data-lucide="check-circle" class="text-[#AE6A78] w-5 h-5"></i> Derma Essential
-                        </h3>
-                        <ul class="space-y-4 text-left text-sm text-slate-700">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check" class="text-[#AE6A78] w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                <span>Nourishes the skin matrix at the cellular root.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check" class="text-[#AE6A78] w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                <span>Delivers continuous, long-term hydration from within.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check" class="text-[#AE6A78] w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                <span>Takes less than 10 seconds a day as a single habit.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <h2 class="section-h2">Product overview</h2>
+      <p id="product-long-desc"></p>
 
-                <div class="max-w-4xl mx-auto text-center">
-                    <p class="text-lg text-slate-800 font-bold leading-relaxed mb-0 text-[#2D2426]">
-                        It’s the easiest way to complement your current routine and reveal a natural, lasting glow — from the inside out.
-                    </p>
-                </div>
-            </div>
-        </section>
+      <hr class="divider">
 
-        <!-- Detailed Formula Ingredients Section -->
-        <section id="formula" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Inside the Advanced Derma Essential Formula</h2>
-                    <p class="text-slate-700">Each ingredient is selected for its purity and ability to nourish skin cells, stimulate keratin production, and fight aging.</p>
-                </div>
+      <h2 class="section-h2" id="heading-benefits"></h2>
+      <ul class="benefits-list" id="benefits-list" aria-label="Key product benefits"></ul>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Biotin -->
-                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
-                        <img src="images/Biotin.webp" alt="Biotin" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
-                        <h3 class="font-bold text-lg mb-2">Biotin</h3>
-                        <p class="text-xs text-slate-800 leading-relaxed">
-                            Acts directly on keratin production to support the structural matrix of hair, skin, and nails. Reduces hair fall, strengthens nails, and improves skin texture.
-                        </p>
-                    </div>
-                    <!-- Vitamin C -->
-                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
-                        <img src="images/Vitamin-C.webp" alt="Vitamin C" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
-                        <h3 class="font-bold text-lg mb-2">Vitamin C</h3>
-                        <p class="text-xs text-slate-800 leading-relaxed">
-                            A powerful antioxidant that neutralizes free radicals. Stimulates natural collagen synthesis, reduces dark spots, and restores a luminous glow.
-                        </p>
-                    </div>
-                    <!-- Vitamin B3 -->
-                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
-                        <img src="images/Vitamin-B3.webp" alt="Vitamin B3" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
-                        <h3 class="font-bold text-lg mb-2">Vitamin B3</h3>
-                        <p class="text-xs text-slate-800 leading-relaxed">
-                            Improves the skin's protective barrier to retain moisture. Minimizes pores, balances oiliness, and reduces redness for a healthier look.
-                        </p>
-                    </div>
-                    <!-- Vitamin B5 -->
-                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
-                        <img src="images/Vitamin-B5.webp" alt="Vitamin B5" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
-                        <h3 class="font-bold text-lg mb-2">Vitamin B5</h3>
-                        <p class="text-xs text-slate-800 leading-relaxed">
-                            Penetrates deeply to retain moisture. Accelerates healing, calms irritations, and keeps skin smooth to prevent flaking and dryness.
-                        </p>
-                    </div>
-                    <!-- Zinc -->
-                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
-                        <img src="images/Zinc.webp" alt="Zinc" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
-                        <h3 class="font-bold text-lg mb-2">Zinc</h3>
-                        <p class="text-xs text-slate-800 leading-relaxed">
-                            Essential for cell regeneration and sebum regulation. Fights inflammation, heals micro-lesions, and keeps nails strong.
-                        </p>
-                    </div>
-                    <!-- Horsetail Extract -->
-                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
-                        <img src="images/Horsetail-Plant-Extract.webp" alt="Horsetail Extract" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
-                        <h3 class="font-bold text-lg mb-2">Horsetail Extract</h3>
-                        <p class="text-xs text-slate-800 leading-relaxed">
-                            A natural source of silicon for skin elasticity and firmness. Strengthens hair from the root, reduces hair fall, and fortifies nails.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <hr class="divider">
 
-        <!-- Seals & Transparency -->
-        <section class="py-16 md:py-24 bg-[#FDF3F5]/30">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-xl border border-slate-50 text-center max-w-4xl mx-auto">
-                    <img src="images/rotulo.png" alt="Supplement Facts Label" class="w-full h-auto rounded-xl mb-10 max-w-md mx-auto">
-                    <div class="pt-8 border-t border-slate-100 flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
-                        <img src="images/imgi_9_fda.png" alt="FDA" class="seal-row-img">
-                        <img src="images/imgi_8_gmp.png" alt="GMP" class="seal-row-img">
-                        <img src="images/imgi_10_nat-2.png" alt="Natural" class="seal-row-img">
-                        <img src="images/imgi_12_gmo.png" alt="GMO Free" class="seal-row-img">
-                        <img src="images/imgi_11_foreign.png" alt="USA" class="seal-row-img">
-                    </div>
-                    <p class="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                        Formulated under strict GMP standards in an FDA-registered facility in the USA.
-                    </p>
-                </div>
-            </div>
-        </section>
+      <h2 class="section-h2" id="heading-audience">Who is it for</h2>
+      <p class="section-intro" id="target-audience"></p>
 
-        <!-- Testimonials Carousel -->
-        <section class="py-12 md:py-20 bg-white overflow-hidden">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-2">What Women Are Saying</h2>
-                <div class="flex justify-center gap-1 text-yellow-400 mb-8">
-                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                    <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                </div>
-            </div>
-            <div class="testimonial-track">
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks. It’s now part of my daily routine.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Amanda, 42</p>
-                </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“My skin feels more hydrated and I feel more confident without makeup.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Jessica, 51</p>
-                </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“It’s simple, easy to stick with, and I actually see a difference in how my skin looks.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Melissa, 47</p>
-                </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“I love that it fits into my routine without effort.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Karen, 58</p>
-                </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“Finally something I can stay consistent with.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Laura, 45</p>
-                </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Amanda, 42</p>
-                </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
-                    <p class="text-slate-800 mb-6 italic">“My skin feels more hydrated and I feel more confident.”</p>
-                    <p class="font-bold text-[#AE6A78]">— Jessica, 51</p>
-                </div>
-            </div>
-        </section>
+      <hr class="divider">
 
+      <h2 class="section-h2" id="heading-helps">How this product can help</h2>
+      <p class="section-intro" id="how-it-helps"></p>
 
+      <hr class="divider">
 
-        <!-- Package Pricing Grid Section -->
-        <section id="buy" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-4">Select Your Saving Package Below</h2>
-                    <p class="text-slate-700">Choose your package to secure your discount and claim your free shipping options.</p>
-                </div>
+      <h2 class="section-h2" id="heading-faq">Frequently asked questions</h2>
+      <ul class="faq-list" id="faq-list" aria-label="Frequently asked questions about the product"></ul>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
-                    <!-- 1 Bottle -->
-                    <div class="bg-[#FDF3F5] rounded-3xl p-8 border border-slate-100 flex flex-col justify-between text-center relative">
-                        <div>
-                            <span class="bg-slate-300 text-slate-800 text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">TRY ONE</span>
-                            <h3 class="font-bold text-xl text-slate-800 mt-4 mb-1">1 BOTTLE</h3>
-                            <p class="text-xs text-slate-700 mb-6">30 Day Supply</p>
-                            <img src="images/1-frasco-1-1-1024x1024.png" alt="1 Bottle" class="w-36 h-36 mx-auto mb-6">
-                            
-                            <div class="flex items-center justify-center mb-4">
-                                <span class="text-2xl font-bold text-slate-800">$</span>
-                                <span class="text-5xl font-black text-slate-800">89</span>
-                                <span class="text-xs text-slate-700 ml-1">/ bottle</span>
-                            </div>
-                            
-                            <ul class="text-xs text-slate-800 space-y-2 mb-6 text-left max-w-[200px] mx-auto">
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-slate-600 w-4 h-4"></i> Save $90</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-slate-600 w-4 h-4"></i> 60 Days Guarantee</li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <p class="text-sm font-bold text-slate-700 mb-2">Total: <span class="line-through text-slate-600">$179</span> $89</p>
-                            <a href="https://instituto-experience.mycartpanda.com/checkout/208211175:1" class="btn-order block w-full py-4 rounded-xl font-bold uppercase tracking-wider text-xs mb-4">
-                                ADD TO CART!
-                            </a>
-                            <img src="images/cards-2-1-1-1-1.webp" alt="Payment Cards" class="w-36 mx-auto">
-                        </div>
-                    </div>
+      <hr class="divider">
 
-                    <!-- 6 Bottles (Best Value) -->
-                    <div class="bg-gradient-to-b from-[#3A1C42] to-[#1E0B25] text-white rounded-3xl p-8 border-2 border-yellow-400 flex flex-col justify-between text-center relative shadow-xl transform md:scale-105">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-[#1E0B25] text-[10px] font-black uppercase tracking-widest px-6 py-1 rounded-full shadow-md">
-                            BEST VALUE!
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-xl text-yellow-300 mt-4 mb-1">6 BOTTLES</h3>
-                            <p class="text-xs text-slate-300 mb-6">180 Day Supply</p>
-                            <img src="images/free-shipping-most-popular-6-1-1024x1024.webp" alt="6 Bottles" class="w-36 h-36 mx-auto mb-6">
-                            
-                            <div class="flex items-center justify-center mb-4">
-                                <span class="text-2xl font-bold text-yellow-300">$</span>
-                                <span class="text-5xl font-black text-yellow-300">49</span>
-                                <span class="text-xs text-slate-300 ml-1">/ bottle</span>
-                            </div>
-                            
-                            <ul class="text-xs text-slate-300 space-y-2 mb-6 text-left max-w-[200px] mx-auto">
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-yellow-400 w-4 h-4"></i> Save $780</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-yellow-400 w-4 h-4"></i> 60 Days Guarantee</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-yellow-400 w-4 h-4"></i> Free US Shipping</li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <p class="text-sm font-bold text-slate-200 mb-2">Total: <span class="line-through text-slate-400">$1074</span> $294</p>
-                            <a href="https://instituto-experience.mycartpanda.com/checkout/208211194:1" class="btn-order block w-full py-4 rounded-xl font-bold uppercase tracking-wider text-xs mb-4">
-                                ADD TO CART!
-                            </a>
-                            <img src="images/cards-2-1-1-1-1.webp" alt="Payment Cards" class="w-36 mx-auto brightness-150">
-                        </div>
-                    </div>
+      <h2 class="section-h2">How this site works</h2>
+      <div class="info-box">
+        <p id="how-it-works"></p>
+      </div>
 
-                    <!-- 3 Bottles (Most Popular) -->
-                    <div class="bg-[#FDF3F5] rounded-3xl p-8 border border-slate-100 flex flex-col justify-between text-center relative">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--brand-primary)] text-white text-[10px] font-black uppercase tracking-widest px-6 py-1 rounded-full shadow-md">
-                            MOST POPULAR
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-xl text-slate-800 mt-4 mb-1">3 BOTTLES</h3>
-                            <p class="text-xs text-slate-700 mb-6">90 Day Supply</p>
-                            <img src="images/free-shipping-most-popular-7-1024x1024.webp" alt="3 Bottles" class="w-36 h-36 mx-auto mb-6">
-                            
-                            <div class="flex items-center justify-center mb-4">
-                                <span class="text-2xl font-bold text-slate-800">$</span>
-                                <span class="text-5xl font-black text-slate-800">59</span>
-                                <span class="text-xs text-slate-700 ml-1">/ bottle</span>
-                            </div>
-                            
-                            <ul class="text-xs text-slate-800 space-y-2 mb-6 text-left max-w-[200px] mx-auto">
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-[var(--brand-primary)] w-4 h-4"></i> Save $360</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-[var(--brand-primary)] w-4 h-4"></i> 60 Days Guarantee</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-[var(--brand-primary)] w-4 h-4"></i> Free US Shipping</li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <p class="text-sm font-bold text-slate-700 mb-2">Total: <span class="line-through text-slate-600">$450</span> $177</p>
-                            <a href="https://instituto-experience.mycartpanda.com/checkout/208211187:1" class="btn-order block w-full py-4 rounded-xl font-bold uppercase tracking-wider text-xs mb-4">
-                                ADD TO CART!
-                            </a>
-                            <img src="images/cards-2-1-1-1-1.webp" alt="Payment Cards" class="w-36 mx-auto">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <h2 class="section-h2">About this site</h2>
+      <p id="about-site"></p>
 
-        <!-- FAQ Section Completo -->
-        <section id="faq" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-3xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-[#2D2426] mb-4">Common Questions</h2>
-                </div>
-                <div class="space-y-4">
-                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
-                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">1. How and why does Derma Essential work?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Derma Essential combines high-concentration Biotin, Vitamin C, and Horsetail extract to work on three fronts: protect cells against oxidative damage, strengthen keratin production, and improve skin firmness with natural silicon.<br><br>The result is more radiant skin, stronger hair, and more resilient nails — in a 100% natural way and without relying on expensive cosmetics.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
-                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">2. Is Derma Essential safe for me?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Yes. Derma Essential is produced in the United States in an FDA-registered facility. Its formula contains only naturally derived ingredients, without artificial stimulants and without harmful chemical additives.<br><br>All ingredients are rigorously tested for quality and safety. However, if you are pregnant, nursing, under the age of 18, or have a known medical condition, we recommend showing the label to your doctor before starting, just as a precaution.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
-                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">3. How and when should I take Derma Essential?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Take two (2) capsules daily with an 8 oz. glass of water. For best results, we recommend taking it in the morning, preferably with a meal.<br><br>This routine allows the vitamins and antioxidants to work consistently in your body, providing nutritional support for skin, hair, and nail cells throughout the day.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
-                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">4. How many bottles should I order?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Most of our customers choose the 6-bottle kit — which covers a full 6-month treatment, includes free shipping, and offers the biggest discount per unit.<br><br>This time frame is ideal for allowing ingredients like Biotin, Vitamin C, and Horsetail to work consistently in your system, supporting skin, hair, and nail health in the long term. The longer you use it, the more consistent and lasting the results.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
-                        <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">5. Can you remind me about the guarantee?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">You’re fully protected by our 60-day money-back guarantee. If you are unsatisfied, return the bottles (even empty) for a full refund within 60 days of purchase. No hassle.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Prominent affiliate disclosure -->
+      <div class="affiliate-badge" role="note" aria-label="Affiliate disclosure">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="9" r="8" stroke="#D97706" stroke-width="1.5"/>
+          <path d="M9 6v4M9 12.5v.5" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <p id="affiliate-disclaimer"></p>
+      </div>
 
-        <!-- Final CTA -->
-        <section class="py-16 md:py-24 bg-white text-center border-t border-slate-50">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-4xl font-bold text-[#2D2426] mb-8">Feel More Confident In Your Skin — Starting Today</h2>
-                    <div class="flex flex-col items-center gap-4">
-                        <a href="#buy" class="btn-order inline-flex px-14 py-6 rounded-[2rem] font-black text-xl uppercase tracking-wider">
-                            Secure My Discount & Order Now →
-                        </a>
-                        <p class="text-xs font-bold text-slate-700 uppercase tracking-widest flex items-center gap-2">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-[#AE6A78]"></i> Covered by our 100% Risk-Free 60-Day Money-Back Guarantee
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#2D2426] py-12 md:py-20 text-slate-400">
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 text-center">
-            <div class="flex flex-col items-center">
-                <div class="mb-10 text-center">
-                    <span class="font-black tracking-tighter text-xl text-white">DERMA<span class="text-[#AE6A78]">ESSENTIAL</span></span>
-                    <p class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] mt-2">Official Authorized Distributor</p>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-8 mb-12 text-[10px] font-bold uppercase tracking-widest">
-                    <button onclick="openModal('terms')" class="hover:text-[#AE6A78]">Terms of Service</button>
-                    <button onclick="openModal('privacy')" class="hover:text-[#AE6A78]">Privacy Policy</button>
-                    <button onclick="openModal('refund')" class="hover:text-[#AE6A78]">Return Policy</button>
-                    <button onclick="openModal('contact')" class="hover:text-[#AE6A78]">Contact Us</button>
-                </div>
-
-                <div class="max-w-4xl text-[10px] leading-relaxed opacity-40 border-t border-white/5 pt-8 mb-8 text-center">
-                    <p><strong>General Disclaimer:</strong> This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content is for informational purposes only. Results may vary depending on individual body chemistry. Your use of this site is subject to our terms of service.</p>
-                </div>
-
-                <div class="mt-4 pt-12 border-t border-white/5 w-full">
-                    <p class="text-[11px] font-bold text-white/20 tracking-[0.3em]">© 2026 INSTITUTO EXPERIENCE. ALL RIGHTS RESERVED.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modals -->
-    <div id="policy-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-[#2D2426]/95 backdrop-blur-md" onclick="closeModal()"></div>
-        <div class="flex min-h-screen items-center justify-center p-4">
-            <div class="relative w-full max-w-4xl bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-                <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
-                    <h3 id="modal-title" class="font-black text-[#AE6A78] uppercase tracking-widest text-[10px]">Document</h3>
-                    <button onclick="closeModal()"><i data-lucide="x" class="w-5 h-5 text-slate-600"></i></button>
-                </div>
-                <div id="modal-content" class="p-10 overflow-y-auto text-sm text-slate-800 leading-relaxed"></div>
-                <div class="p-6 bg-slate-50 border-t border-slate-100 text-center">
-                    <button onclick="closeModal()" class="bg-[#AE6A78] text-white px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg">Close</button>
-                </div>
-            </div>
-        </div>
+      <!-- CTA after consent -->
+      <div class="cta-block" id="cta-block" role="region" aria-live="polite" aria-label="Access the official site">
+        <p id="cta-msg"></p>
+        <a id="cta-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-cta">
+          <span id="cta-label"></span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
 
-    <script>
-        const modal = document.getElementById('policy-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalContent = document.getElementById('modal-content');
+    <!-- Legal sections — content injected by buildLegalSections() -->
+    <div class="legal-section" id="section-privacy"    role="region"></div>
+    <div class="legal-section" id="section-terms"      role="region"></div>
+    <div class="legal-section" id="section-disclaimer" role="region"></div>
 
-        const docs = {
-            terms: { title: "Terms of Service", content: "<h1>Terms of Service</h1><p>Date Effective: August, 2021</p><h2>General</h2><p>This website is owned and operated by COMPANY. Accessing the Site constitutes use and agreement to be bound by these Terms of Service. Personal non-commercial use only.</p><h2>Disclaimers</h2><p>All information provided on this Site is for informational purposes only. The statements regarding these products have not been evaluated by the FDA.</p>" },
-            privacy: { title: "Privacy Policy", content: "<h1>Privacy Policy</h1><p>We respect your privacy regarding any information we may collect. This policy explains what information is collected, how it is used, and under what circumstances we disclose it.</p><h2>Website Visitors</h2><p>We collect non-personally-identifying information such as browser type and referring sites to better understand our visitors.</p>" },
-            refund: { title: "Return Policy", content: "<h1>Return Policy</h1><p>60-Day Money Back Guarantee. If you are unsatisfied, return the bottles (even empty) for a full refund within 60 days of purchase. Contact contact@customercs.com to begin the process.</p><h2>Process</h2><p>Refunds are processed within 5-10 business days after receiving the returned package.</p>" },
-            contact: { title: "Contact Us", content: "<h1>Contact Support</h1><p>Our team is available 24/7 to help you with your questions.</p><p><strong>Email:</strong> contact@customercs.com</p><p><strong>Phone:</strong> +1 (507) 448-8190</p>" }
-        };
-
-        function openModal(docType) {
-            const doc = docs[docType];
-            modalTitle.innerText = doc.title.toUpperCase();
-            modalContent.innerHTML = doc.content;
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        function toggleFaq(button) {
-            const item = button.parentElement;
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            
-            // Tab notification title ticker
-            var titulos = ["\uD83D\uDCE9 (1) Unread Message", "Derma Essential™ | Official Site"];
-            var indice = 0;
-            function atualizarTitulo() {
-                document.title = titulos[indice];
-                indice = (indice + 1) % titulos.length;
-            }
-            atualizarTitulo();
-            setInterval(atualizarTitulo, 1500);
-
-            // Parameters forwarding to checkout links
-            let params = new URLSearchParams(window.location.search).toString();
-            if (params) {
-                document.querySelectorAll("a").forEach(function(e) {
-                    if (e.href) {
-                        // Skip hash links
-                        if (e.href.includes('#')) return;
-                        if (e.href.includes("?")) {
-                            e.href += "&" + params;
-                        } else {
-                            e.href += "?" + params;
-                        }
-                    }
-                });
-            }
+  </div><!-- /.page-wrapper -->
 
 
+  <!-- ══════════════════ COOKIE BANNER ══════════════════ -->
+  <div class="cookie-banner" id="cookie-banner"
+    role="dialog" aria-modal="true"
+    aria-labelledby="cookie-title" aria-describedby="cookie-desc">
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('active');
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    <div class="cookie-card" id="cookie-card" tabindex="-1">
+      <p class="cookie-title" id="cookie-title"></p>
+      <p class="cookie-text"  id="cookie-desc"></p>
+
+      <div class="cookie-actions">
+        <a href="#" class="btn btn-accept" onclick="return acceptAll()" id="btn-accept" rel="noopener"></a>
+        <button class="btn btn-reject" onclick="rejectOptional()" id="btn-reject"></button>
+        <button class="btn btn-manage" id="btn-manage" onclick="togglePrefs()"
+          aria-expanded="false" aria-controls="prefs-panel"></button>
+      </div>
+
+      <div class="prefs-panel" id="prefs-panel" aria-label="Cookie preferences">
+        <!-- Strictly necessary -->
+        <div class="pref-row">
+          <div class="pref-meta">
+            <div class="pref-name"  id="pref-strict-name"></div>
+            <div class="pref-desc"  id="pref-strict-desc"></div>
+          </div>
+          <div class="toggle-wrap" aria-label="Always on">
+            <span class="toggle-always" id="pref-always-label"></span>
+          </div>
+        </div>
+        <!-- Analytics -->
+        <div class="pref-row">
+          <div class="pref-meta">
+            <div class="pref-name">Analytics</div>
+            <div class="pref-desc" id="pref-analytics-desc"></div>
+          </div>
+          <div class="toggle-wrap">
+            <label class="toggle">
+              <input type="checkbox" id="toggle-analytics" aria-label="Enable analytics cookies">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+        </div>
+        <!-- Advertising -->
+        <div class="pref-row">
+          <div class="pref-meta">
+            <div class="pref-name"  id="pref-ads-name"></div>
+            <div class="pref-desc"  id="pref-ads-desc"></div>
+          </div>
+          <div class="toggle-wrap">
+            <label class="toggle">
+              <input type="checkbox" id="toggle-ads" aria-label="Enable advertising cookies">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+        </div>
+        <div class="prefs-actions">
+          <a href="#" class="btn btn-accept" onclick="return savePrefs()" id="btn-save-prefs" rel="noopener"></a>
+          <button class="btn btn-reject" onclick="cancelPrefs()" id="btn-cancel-prefs"></button>
+        </div>
+      </div>
+
+      <div class="cookie-meta">
+        <a href="#privacy"    onclick="navigateTo('privacy');return false;"    id="meta-link-privacy"></a>
+        <a href="#terms"      onclick="navigateTo('terms');return false;"      id="meta-link-terms"></a>
+        <a href="#disclaimer" onclick="navigateTo('disclaimer');return false;" id="meta-link-disclaimer"></a>
+        <a href="#product"    onclick="navigateTo('product');return false;"    id="meta-link-product"></a>
+      </div>
+    </div>
+  </div><!-- /.cookie-banner -->
+
+  <!-- LEGAL BOTTOM SHEET -->
+  <div class="legal-sheet" id="legal-sheet" role="dialog" aria-modal="true" aria-labelledby="legal-sheet-title">
+    <div class="legal-sheet-card">
+      <div class="legal-sheet-header">
+        <span class="legal-sheet-title" id="legal-sheet-title"></span>
+        <button class="legal-sheet-close" onclick="closeLegalSheet()" aria-label="Close">×</button>
+      </div>
+      <div class="legal-sheet-body" id="legal-sheet-body"></div>
+    </div>
+  </div><!-- /.legal-sheet -->
+
+  <script>
+// ─────────────────────────────────────────────
+// LOCALES — translatable UI strings (EN only for this campaign)
+// ─────────────────────────────────────────────
+    var LOCALES = {
+      EN: {
+        // ── Privacy Policy ──────────────────────────────────
+        privTitle: 'Privacy Policy',
+        privS1: '1. Data Controller',
+        privCtrl: '{{ctrl}} For privacy enquiries or data requests, contact: <a href="mailto:{{email}}">{{email}}</a>.',
+        privS2: '2. Data We Collect',
+        privS2intro: 'With your consent, we may collect the following categories of data:',
+        privS2items: ['IP address and approximate geolocation data','Device information (type, operating system, browser)','Pages visited, time on site and interactions on this website','Cookie identifiers (when consented)'],
+        privS3: '3. Purposes of Processing',
+        privS3items: ['<strong>Essential operations:</strong> security and core functionality. Legal basis: legitimate interest.','<strong>Analytics:</strong> understanding site usage to improve performance and content. Legal basis: consent.','<strong>Advertising / ads personalisation:</strong> ad personalisation, conversion measurement and remarketing via platforms such as Google Ads. Legal basis: consent.'],
+        privS4: '4. Legal Basis',
+        privS5: '5. Third-Party Sharing',
+        privS5body: 'With your consent, we may share data with analytics and digital advertising platforms. See the <a href="https://business.safety.google/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.',
+        privS6: '6. Your Rights',
+        privS6contact: 'To exercise your rights, contact: <a href="mailto:{{email}}">{{email}}</a>.',
+        privS7: '7. Retention &amp; Security',
+        privS7body: 'Data is retained for as long as necessary for the purposes described. We implement technical and organisational measures to protect your data against unauthorised access.',
+        privS8: '8. Policy Updates',
+        privS8body: 'This policy may be updated periodically. The most recent version will always be available on this page.',
+        // ── Terms ────────────────────────────────────────────
+        termsTitle: 'Terms of Use',
+        termsS1: '1. Nature of this Site',
+        termsS1body: 'This website is strictly <strong>informational and independent</strong>. The content does not substitute professional advice of any kind. Always consult a qualified professional before making decisions based on information presented here.',
+        termsS2: '2. Responsibility for External Content',
+        termsExternal: 'This site is not responsible for the content, policies or practices of the official <strong>{{name}}</strong> website. By accessing the official site you will be subject to that domain\'s own terms and privacy policy.',
+        termsS3: '3. Purchases and Transactions',
+        termsS3body: 'Any purchase made on the official product website is governed solely by the producer\'s own terms and policies. This site does not process payments and bears no responsibility for transactions carried out outside this domain.',
+        termsS4: '4. Affiliate Disclosure',
+        termsAffiliate: 'This site is operated by <strong>{{coLabel}}</strong>, who participates in an affiliate programme. The operator may receive a commission if a user makes a purchase through links on this page. This does not alter the final price paid by the consumer.',
+        termsS5: '5. Accuracy of Information',
+        termsS5body: 'We strive to keep information up-to-date and accurate. For official and definitive information, please refer to the manufacturer\'s website.',
+        termsS6: '6. Intellectual Property',
+        termsS6body: 'Original content on this site is the property of the operator. Product names, brands and logos are the property of their respective owners.',
+        termsS7: '7. Contact',
+        termsS7body: 'Questions about these terms: <a href="mailto:{{email}}">{{email}}</a>.',
+        // ── Disclaimer ───────────────────────────────────────
+        discTitle: 'Legal Disclaimer',
+        discS1: '1. Nature and Independence of this Site',
+        discNature: 'This is an independent informational website about the product <strong>{{name}}</strong>. We are not affiliated with, partners of, official representatives of, or endorsed by the manufacturer of <strong>{{name}}</strong>. All content has been produced independently for informational purposes.',
+        discS2: '2. Commercial Relationship Disclosure (Affiliate)',
+        discAffiliate: 'This site is operated by <strong>{{coLabel}}</strong>, who participates in an affiliate programme. This means that if you access the official site through links on this page and make a purchase, the operator may receive a commission from the manufacturer. <strong>This commercial relationship is disclosed {{affiliateDisclosure}}.</strong> The commission does not affect the price paid by the consumer.',
+        discS3: '3. No Warranty or Guaranteed Results',
+        discS3body: 'Information on this site is strictly informational and educational in nature. We make no guarantee of specific results from the use of the product described. Individual results may vary significantly depending on personal factors, lifestyle, health conditions and other variables outside our control. No statement on this site should be interpreted as a promise or guarantee of outcome.',
+        discS4: '4. No Substitute for Professional Advice',
+        discNicheProf: 'The content of this site is informational in nature regarding {{niche}} and <strong>does not substitute medical, nutritional, financial, legal or any other professional advice</strong>. Always consult a qualified professional before making decisions related to {{niche}}.',
+        discGenericProf: 'The content of this site is strictly informational in nature and <strong>does not substitute professional advice of any kind</strong>. Always consult a qualified professional before making decisions based on information presented here.',
+        discS5: '5. Disclaimer of Liability for the Product',
+        discS5body: 'The operator of this site has no control over the quality, safety, efficacy, availability or price of <strong>{{name}}</strong>. Any complaints, warranties or rights relating to the product must be directed to the manufacturer. The decision to purchase the product rests solely with the consumer.',
+        discS6: '6. Accuracy of Information',
+        discS6body: 'We endeavour to keep information accurate and current, but make no guarantee of completeness, accuracy or currency. Product specifications, prices, availability and other characteristics are determined exclusively by the manufacturer and are subject to change without notice. For official information, always consult the manufacturer\'s website.',
+        discS7: '7. External Links',
+        discS7body: 'This site contains links to the official product website. We do not control, endorse or accept responsibility for the content, privacy policies or practices of any external site. By following an external link you will be subject to that site\'s policies and terms.',
+        discS8: '8. Trademark Ownership',
+        discS8body: 'The name <strong>{{name}}</strong> and any associated trademarks, logos or symbols are the exclusive property of the respective manufacturer. References to these trademarks on this site are purely informational and do not imply endorsement, partnership or any official relationship between this site and the trademark owner.',
+        discS9: '9. Advertising',
+        discS9body: 'This site may display advertisements through digital advertising platforms, including Google Ads. The display of advertising is subject to the user\'s consent for advertising cookies as described in our Privacy Policy. The operator of this site is solely responsible for the content of advertisements displayed and for compliance with the policies of the advertising platforms used.',
+        discS10: '10. Governing Law',
+        discGovLaw: 'This disclaimer is governed by {{govLaw}}. Any disputes shall be resolved in {{disputeForum}}.',
+        discS11: '11. Contact',
+        discS11body: 'Questions about this disclaimer: <a href="mailto:{{email}}">{{email}}</a>.',
+        // ── FDA / supplement disclaimer ───────────────────────
+        discFDA: '* These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary.',
+        // ── UI strings ───────────────────────────────────────
+        uiBannerTitle: 'We use cookies and data',
+        uiBannerDesc: 'We use cookies for analytics, functionality and personalised ads. Accept, reject or manage your preferences. <a href="#privacy" onclick="navigateTo(\'privacy\');return false;">Privacy Policy</a>',
+        uiBtnAccept: 'Accept &amp; Visit Official Site',
+        uiBtnReject: 'Reject optional',
+        uiBtnManage: 'Manage preferences',
+        uiPrefStrictName: 'Strictly necessary',
+        uiPrefStrictDesc: 'Essential for basic site functionality. Not used for advertising purposes.',
+        uiPrefAlways: 'Always on',
+        uiPrefAnalyticsDesc: 'Help understand how the site is used to improve performance and content. They do not identify you personally.',
+        uiPrefAdsName: 'Advertising',
+        uiPrefAdsDesc: 'Personalise ads (ads personalisation), measure conversions and build audiences for remarketing on platforms such as Google Ads.',
+        uiBtnSavePrefs: 'Save preferences',
+        uiBtnCancel: 'Cancel',
+        uiMetaPrivacy: 'Privacy Policy',
+        uiMetaTerms: 'Terms of Use',
+        uiMetaDisclaimer: 'Legal Disclaimer',
+        uiMetaProduct: 'About the product',
+        uiCloseCard: '× Close',
+        uiCloseCardAria: 'Close product information',
+        uiCardNotice: 'Independent distributor site.',
+        uiCardNoticeLinkText: 'View full legal disclaimer',
+        uiBadge: 'Product information',
+        uiBenefitsHeading: 'Key benefits of {{name}}',
+        uiBenefitsAria: 'Key product benefits',
+        uiH2Overview: 'Product overview',
+        uiH2Audience: 'Who is it for',
+        uiH2Helps: 'How this product can help',
+        uiH2Faq: 'Frequently asked questions',
+        uiFaqAria: 'Frequently asked questions about the product',
+        uiH2HowWorks: 'How this site works',
+        uiH2About: 'About this site',
+        uiAffBadgeAria: 'Affiliate disclosure',
+        uiCtaRegionAria: 'Access the official site',
+        uiHowItWorks: 'This is an independent informational website about <strong>{{name}}</strong>. Clicking "Visit official site" will take you to the producer\'s domain, where full product details, purchase options and support are available. The operator of this site may receive a commission if a purchase is made through this link — this does not affect the price you pay.',
+        uiAboutSite: 'This site was created to present clear and objective information about <strong>{{name}}</strong>{{kw}}, its benefits, indications and key points to consider before you visit the manufacturer\'s official site. Our focus is transparency and accountability, free from misleading claims.',
+        uiAboutKw: ', focusing on <strong>{{kw0}}</strong>',
+        uiAffDisclaimer: '<strong>Affiliate disclosure:</strong> This site is operated by <strong>{{coLabel}}</strong>, an independent affiliate distributor. <strong>We are not the manufacturer or the official {{name}} website.</strong> We may receive a commission if you make a purchase through links on this page. This commercial relationship does not affect the price you pay or our opinions. <a href="#disclaimer" onclick="navigateTo(\'disclaimer\');return false;">View full legal disclaimer</a>.',
+        uiCardVisitLabel: 'Visit the official site',
+        uiCtaLabel: 'Visit the official {{name}} site',
+        uiCtaAria: 'Visit the official {{name}} site (opens in a new tab)',
+        uiCtaMsgAccept: 'Consent recorded. You can now visit the official site.',
+        uiCtaMsgReject: 'Preferences saved. Only essential cookies will be used.',
+        uiCtaMsgPrefs: 'Preferences saved. You can now visit the official site.',
+        uiLegalSheetClose: 'Close',
+      }
+    };
+
+    var LANG_MAP = {
+      US: 'en-US', EU: 'en-GB', AU: 'en-AU', INT: 'en'
+    };
+
+    var _ui = {};
+
+    function renderTpl(s, v) {
+      return s.replace(/\{\{(\w+)\}\}/g, function(_, k) { return v[k] !== undefined ? v[k] : ''; });
+    }
+
+// ─────────────────────────────────────────────
+// BUILD LEGAL SECTIONS
+// ─────────────────────────────────────────────
+    function buildLegalSections(cfg) {
+      var jk  = cfg.jurisdiction || 'US';
+      var jur = JURISDICTIONS[jk] || JURISDICTIONS['US'];
+      var loc = LOCALES['EN'];
+
+      var name    = cfg.productName   || '';
+      var aff     = cfg.affiliateName || '';
+      var co      = cfg.companyName   || '';
+      var coLabel = co ? aff + ' (' + co + ')' : aff;
+      var email   = cfg.privacyEmail  || '';
+      var niche   = cfg.productNiche  || '';
+      var ctrl    = co
+        ? 'This site is operated by <strong>' + aff + '</strong> (' + co + ').'
+        : 'This site is operated by <strong>' + aff + '</strong>.';
+
+      var v = {
+        name: name, aff: aff, co: co, coLabel: coLabel,
+        email: email, niche: niche, ctrl: ctrl,
+        affiliateDisclosure: jur.affiliateDisclosure,
+        govLaw: jur.govLaw,
+        disputeForum: jur.disputeForum
+      };
+
+      function r(s) { return renderTpl(s, v); }
+      function ul(items) { return '<ul>' + items.map(function(i){ return '<li>' + i + '</li>'; }).join('') + '</ul>'; }
+
+      var nicheP = niche ? r(loc.discNicheProf) : loc.discGenericProf;
+
+      var privHTML =
+        '<h2>' + loc.privTitle + '</h2>' +
+        '<h3>' + loc.privS1 + '</h3><p>' + r(loc.privCtrl) + '</p>' +
+        '<h3>' + loc.privS2 + '</h3><p>' + loc.privS2intro + '</p>' + ul(loc.privS2items) +
+        '<h3>' + loc.privS3 + '</h3>' + ul(loc.privS3items) +
+        '<h3>' + loc.privS4 + '</h3><p>' + jur.privS4body + '</p>' +
+        '<h3>' + loc.privS5 + '</h3><p>' + loc.privS5body + '</p>' +
+        '<h3>' + loc.privS6 + '</h3>' + ul(jur.privS6items) + '<p>' + r(loc.privS6contact) + '</p>' +
+        '<h3>' + loc.privS7 + '</h3><p>' + loc.privS7body + '</p>' +
+        '<h3>' + loc.privS8 + '</h3><p>' + loc.privS8body + '</p>';
+
+      var termsHTML =
+        '<h2>' + loc.termsTitle + '</h2>' +
+        '<h3>' + loc.termsS1 + '</h3><p>' + loc.termsS1body + '</p>' +
+        '<h3>' + loc.termsS2 + '</h3><p>' + r(loc.termsExternal) + '</p>' +
+        '<h3>' + loc.termsS3 + '</h3><p>' + loc.termsS3body + '</p>' +
+        '<h3>' + loc.termsS4 + '</h3><p>' + r(loc.termsAffiliate) + '</p>' +
+        '<h3>' + loc.termsS5 + '</h3><p>' + loc.termsS5body + '</p>' +
+        '<h3>' + loc.termsS6 + '</h3><p>' + loc.termsS6body + '</p>' +
+        '<h3>' + loc.termsS7 + '</h3><p>' + r(loc.termsS7body) + '</p>';
+
+      var discHTML =
+        '<h2>' + loc.discTitle + '</h2>' +
+        '<h3>' + loc.discS1 + '</h3><p>' + r(loc.discNature) + '</p>' +
+        '<h3>' + loc.discS2 + '</h3><p>' + r(loc.discAffiliate) + '</p>' +
+        '<h3>' + loc.discS3 + '</h3><p>' + loc.discS3body + '</p>' +
+        '<h3>' + loc.discS4 + '</h3><p>' + nicheP + '</p>' +
+        '<h3>' + loc.discS5 + '</h3><p>' + r(loc.discS5body) + '</p>' +
+        '<h3>' + loc.discS6 + '</h3><p>' + loc.discS6body + '</p>' +
+        '<h3>' + loc.discS7 + '</h3><p>' + loc.discS7body + '</p>' +
+        '<h3>' + loc.discS8 + '</h3><p>' + r(loc.discS8body) + '</p>' +
+        '<h3>' + loc.discS9 + '</h3><p>' + loc.discS9body + '</p>' +
+        '<h3>' + loc.discS10 + '</h3><p>' + r(loc.discGovLaw) + '</p>' +
+        '<h3>' + loc.discS11 + '</h3><p>' + r(loc.discS11body) + '</p>' +
+        '<p style="margin-top:16px;font-size:12px;color:#9CA3AF;">' + loc.discFDA + '</p>';
+
+      function wrap(html) {
+        return '<div class="legal-card">' + html + '</div>';
+      }
+
+      document.getElementById('section-privacy').innerHTML    = wrap(privHTML);
+      document.getElementById('section-terms').innerHTML      = wrap(termsHTML);
+      document.getElementById('section-disclaimer').innerHTML = wrap(discHTML);
+    }
+
+// ─────────────────────────────────────────────
+// APPLY UI STRINGS
+// ─────────────────────────────────────────────
+    function applyUIStrings(loc, name, coLabel, kw0) {
+      var v = { name: name, coLabel: coLabel, kw0: kw0,
+                kw: kw0 ? loc.uiAboutKw.replace('{{kw0}}', kw0) : '' };
+      function r(s) { return s ? s.replace(/\{\{(\w+)\}\}/g, function(_, k){ return v[k] !== undefined ? v[k] : ''; }) : ''; }
+
+      var tEl = document.getElementById('cookie-title');
+      if (tEl) tEl.textContent = loc.uiBannerTitle;
+      var dEl = document.getElementById('cookie-desc');
+      if (dEl) dEl.innerHTML = loc.uiBannerDesc;
+
+      var bAccept = document.querySelector('.btn-accept');
+      var bReject = document.querySelector('.btn-reject:not(.prefs-actions .btn-reject)');
+      var bManage = document.getElementById('btn-manage');
+      if (bAccept) { bAccept.innerHTML = loc.uiBtnAccept; bAccept.setAttribute('aria-label', loc.uiBtnAccept.replace(/&amp;/g,'&')); }
+      if (bReject) { bReject.textContent = loc.uiBtnReject; bReject.setAttribute('aria-label', loc.uiBtnReject); }
+      if (bManage) bManage.textContent = loc.uiBtnManage;
+
+      var pRows = document.querySelectorAll('.pref-row');
+      if (pRows[0]) {
+        pRows[0].querySelector('.pref-name').textContent = loc.uiPrefStrictName;
+        pRows[0].querySelector('.pref-desc').textContent = loc.uiPrefStrictDesc;
+        pRows[0].querySelector('.toggle-always').textContent = loc.uiPrefAlways;
+      }
+      if (pRows[1]) { pRows[1].querySelector('.pref-desc').textContent = loc.uiPrefAnalyticsDesc; }
+      if (pRows[2]) {
+        pRows[2].querySelector('.pref-name').textContent = loc.uiPrefAdsName;
+        pRows[2].querySelector('.pref-desc').textContent = loc.uiPrefAdsDesc;
+      }
+      var paAccept = document.querySelector('.prefs-actions .btn-accept');
+      var paCancel = document.querySelector('.prefs-actions .btn-reject');
+      if (paAccept) paAccept.textContent = loc.uiBtnSavePrefs;
+      if (paCancel) paCancel.textContent = loc.uiBtnCancel;
+
+      var mLinks = document.querySelectorAll('.cookie-meta a');
+      if (mLinks[0]) mLinks[0].textContent = loc.uiMetaPrivacy;
+      if (mLinks[1]) mLinks[1].textContent = loc.uiMetaTerms;
+      if (mLinks[2]) mLinks[2].textContent = loc.uiMetaDisclaimer;
+      if (mLinks[3]) mLinks[3].textContent = loc.uiMetaProduct;
+
+      var lsClose = document.querySelector('.legal-sheet-close');
+      if (lsClose) lsClose.setAttribute('aria-label', loc.uiLegalSheetClose);
+
+      var closeBtn = document.querySelector('.card-close button');
+      if (closeBtn) { closeBtn.innerHTML = loc.uiCloseCard; closeBtn.setAttribute('aria-label', loc.uiCloseCardAria); }
+      var cardNotice = document.querySelector('.card-notice');
+      if (cardNotice) cardNotice.innerHTML = loc.uiCardNotice + ' <a href="#disclaimer" onclick="navigateTo(\'disclaimer\');return false;">' + loc.uiCardNoticeLinkText + '</a>';
+
+      document.getElementById('heading-audience').textContent = loc.uiH2Audience;
+      document.getElementById('heading-helps').textContent    = loc.uiH2Helps;
+      document.getElementById('heading-faq').textContent      = loc.uiH2Faq;
+
+      var cardH2s = Array.from(document.querySelectorAll('#product-card .section-h2'));
+      var noIdH2s = cardH2s.filter(function(el){ return !el.id; });
+      if (noIdH2s[0]) noIdH2s[0].textContent = loc.uiH2Overview;
+      if (noIdH2s[1]) noIdH2s[1].textContent = loc.uiH2HowWorks;
+      if (noIdH2s[2]) noIdH2s[2].textContent = loc.uiH2About;
+
+      var bList = document.getElementById('benefits-list');
+      if (bList) bList.setAttribute('aria-label', loc.uiBenefitsAria);
+      var fList = document.getElementById('faq-list');
+      if (fList) fList.setAttribute('aria-label', loc.uiFaqAria);
+      var affBadge = document.querySelector('.affiliate-badge');
+      if (affBadge) affBadge.setAttribute('aria-label', loc.uiAffBadgeAria);
+      var ctaBlock = document.getElementById('cta-block');
+      if (ctaBlock) ctaBlock.setAttribute('aria-label', loc.uiCtaRegionAria);
+
+      document.getElementById('how-it-works').innerHTML   = r(loc.uiHowItWorks);
+      document.getElementById('about-site').innerHTML     = r(loc.uiAboutSite);
+      document.getElementById('affiliate-disclaimer').innerHTML = r(loc.uiAffDisclaimer);
+      var cardVisitLabel = document.getElementById('card-visit-label');
+      if (cardVisitLabel) cardVisitLabel.textContent = loc.uiCardVisitLabel;
+      document.getElementById('cta-label').textContent    = r(loc.uiCtaLabel);
+      document.getElementById('cta-msg').textContent      = loc.uiCtaMsgAccept;
+      var ctaLinkEl = document.getElementById('cta-link');
+      if (ctaLinkEl) ctaLinkEl.setAttribute('aria-label', r(loc.uiCtaAria));
+
+      var hBen = document.getElementById('heading-benefits');
+      if (hBen) hBen.textContent = r(loc.uiBenefitsHeading);
+    }
+
+// ─────────────────────────────────────────────
+// JURISDICTIONS
+// ─────────────────────────────────────────────
+    var JURISDICTIONS = {
+      US: {
+        locale: 'EN',
+        privS4body: 'For non-essential cookies and data, the legal basis is your <strong>explicit consent</strong>, as required by applicable US privacy laws including the <strong>California Consumer Privacy Act (CCPA)</strong>. You may withdraw your consent at any time.',
+        privS6items: ['Know what personal information is collected about you','Request deletion of your personal information','Opt out of the sale of your personal information (CCPA)','Non-discrimination for exercising your privacy rights','Lodge a complaint with the FTC or your state attorney general'],
+        affiliateDisclosure: 'in compliance with <strong>FTC Endorsement Guidelines (16 CFR Part 255)</strong> and applicable Google Ads policies',
+        govLaw: 'the laws of the United States and, where applicable, the California Consumer Privacy Act (CCPA) and applicable FTC regulations',
+        disputeForum: 'courts of competent jurisdiction in the operator\'s state of residence',
+      },
+      EU: {
+        locale: 'EN',
+        privS4body: 'For non-essential cookies and data, the legal basis is your <strong>explicit consent</strong> (Art. 6(1)(a) GDPR). You may withdraw your consent at any time. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.',
+        privS6items: ['Access a copy of your data (Art. 15 GDPR)','Rectification of inaccurate data (Art. 16 GDPR)','Erasure — "right to be forgotten" (Art. 17 GDPR)','Restriction of processing (Art. 18 GDPR)','Data portability (Art. 20 GDPR)','Object to processing (Art. 21 GDPR)','Lodge a complaint with your national Data Protection Authority (DPA)'],
+        affiliateDisclosure: 'in compliance with the <strong>GDPR (Regulation EU 2016/679)</strong> transparency requirements and applicable EU consumer protection directives',
+        govLaw: 'European Union law, including the General Data Protection Regulation (GDPR, Regulation EU 2016/679) and the ePrivacy Directive 2002/58/EC',
+        disputeForum: 'courts of competent jurisdiction within the European Union',
+      },
+      AU: {
+        locale: 'EN',
+        privS4body: 'For non-essential cookies and data, the legal basis is your <strong>consent</strong>, as required by the <strong>Privacy Act 1988 (Cth)</strong> and the Australian Privacy Principles (APPs). You may withdraw your consent at any time.',
+        privS6items: ['Access the personal information we hold about you','Request correction of inaccurate information','Opt out of direct marketing communications','Lodge a complaint with the Office of the Australian Information Commissioner (OAIC)'],
+        affiliateDisclosure: 'in compliance with the <strong>Australian Consumer Law (Competition and Consumer Act 2010, Schedule 2)</strong> and ACCC guidelines',
+        govLaw: 'the laws of Australia, including the Privacy Act 1988 (Cth) and the Australian Consumer Law',
+        disputeForum: 'courts of competent jurisdiction in Australia',
+      },
+      INT: {
+        locale: 'EN',
+        privS4body: 'For non-essential cookies and data, the legal basis is your <strong>explicit consent</strong>, in accordance with applicable international data protection standards and best practices. You may withdraw your consent at any time.',
+        privS6items: ['Access the data we hold about you','Request correction or deletion of your data','Withdraw your consent at any time','Restrict how your data is processed','Lodge a complaint with your local data protection authority'],
+        affiliateDisclosure: 'in compliance with applicable international advertising standards and consumer protection laws',
+        govLaw: 'applicable international laws and regulations',
+        disputeForum: 'courts of competent jurisdiction',
+      }
+    };
+
+// ─────────────────────────────────────────────
+// APPLY CONFIG
+// ─────────────────────────────────────────────
+    (function applyConfig() {
+      var c = window.SITE_CONFIG;
+      if (!c) { document.title = 'ERROR: config not found'; return; }
+
+      var name    = c.productName    || '';
+      var url     = c.productUrl     || '#';
+      var sDesc   = c.shortDesc      || '';
+      var lDesc   = c.longDesc       || '';
+      var bens    = c.benefits       || [];
+      var aff     = c.affiliateName  || '';
+      var co      = c.companyName    || '';
+      var email   = c.privacyEmail   || '';
+      var niche   = c.productNiche   || '';
+      var adTitle = c.adTitle        || '';
+      var adDesc  = c.adDescription  || sDesc;
+      var audTxt  = c.targetAudience || '';
+      var helpTxt = c.howItHelps     || '';
+      var faqData = c.faq            || [];
+      var coLabel = co ? aff + ' (' + co + ')' : aff;
+      var jk  = c.jurisdiction || 'US';
+      var jur = JURISDICTIONS[jk] || JURISDICTIONS['INT'];
+      var loc = LOCALES['EN'];
+
+      document.documentElement.lang = LANG_MAP[jk] || 'en';
+
+      _ui = loc;
+
+      var kw0 = (c.adKeywords && c.adKeywords.length > 0) ? c.adKeywords[0] : '';
+
+      applyUIStrings(loc, name, coLabel, kw0);
+
+      // Meta tags
+      var _titleRev = c.titleReverse === true;
+      var h1Text    = adTitle ? (_titleRev ? adTitle + ' \u2013 ' + name : name + ' \u2013 ' + adTitle) : name + ' \u2013 Information and overview';
+      var pageTitle = (adTitle ? (_titleRev ? adTitle + ' \u2013 ' + name : name + ' \u2013 ' + adTitle) : name) + ' | Information and cookie notice';
+      var metaDesc  = adDesc || sDesc;
+      document.getElementById('meta-title').textContent = pageTitle;
+      document.title = pageTitle;
+      document.getElementById('meta-desc').setAttribute('content', metaDesc);
+      document.getElementById('og-title').setAttribute('content', pageTitle);
+      document.getElementById('og-desc').setAttribute('content', metaDesc);
+      document.getElementById('og-url').setAttribute('content', window.location.href);
+
+      // Schema markup
+      var schemaTypes = [{ '@type': 'WebPage', 'name': pageTitle, 'description': metaDesc, 'url': window.location.href, 'inLanguage': document.documentElement.lang }];
+      if (faqData.length > 0) {
+        schemaTypes.push({ '@type': 'FAQPage', 'mainEntity': faqData.map(function(item) {
+          return { '@type': 'Question', 'name': item.q, 'acceptedAnswer': { '@type': 'Answer', 'text': item.a } };
+        }) });
+      }
+      var schemaEl = document.getElementById('page-schema');
+      if (schemaEl) schemaEl.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': schemaTypes });
+
+      var kws = c.adKeywords;
+      if (kws && kws.length > 0) {
+        var kwEl = document.getElementById('meta-keywords');
+        if (kwEl) kwEl.setAttribute('content', kws.join(', '));
+      }
+
+      // Product card
+      document.getElementById('product-heading').textContent    = h1Text;
+      document.getElementById('product-short-desc').textContent = adDesc || sDesc;
+      document.getElementById('product-long-desc').innerHTML    = lDesc;
+      var cardVisitBtn = document.getElementById('card-visit-btn');
+      if (cardVisitBtn) cardVisitBtn.href = url;
+
+      // Benefits
+      var list = document.getElementById('benefits-list');
+      var checkSVG = '<svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1.5 4.5l2 2 4-4" stroke="#CA7F8C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      bens.forEach(function(b) {
+        var li = document.createElement('li');
+        li.innerHTML = '<span class="check-icon">' + checkSVG + '</span>' + b;
+        list.appendChild(li);
+      });
+
+      // Target audience
+      document.getElementById('target-audience').innerHTML = audTxt || (name + ' may be an option for people looking for information about ' + (niche || 'this type of product') + '. Always consult a qualified professional before using any product.');
+
+      // How it helps
+      document.getElementById('how-it-helps').innerHTML = helpTxt || ('This site was created to bring together key information about <strong>' + name + '</strong> in one place, making your research easier before visiting the manufacturer\'s official site.');
+
+      // FAQ
+      var faqList = document.getElementById('faq-list');
+      if (faqData.length > 0) {
+        faqData.forEach(function(item, i) {
+          var li = document.createElement('li');
+          li.className = 'faq-item';
+          li.innerHTML =
+            '<div class="faq-q"><span class="faq-q-marker" aria-hidden="true">' + (i + 1) + '</span>' +
+            '<span>' + item.q + '</span></div>' +
+            '<p class="faq-a">' + item.a + '</p>';
+          faqList.appendChild(li);
         });
-    </script>
+      } else {
+        document.getElementById('heading-faq').style.display = 'none';
+        faqList.style.display = 'none';
+      }
+
+      // CTA href
+      var ctaLink = document.getElementById('cta-link');
+      if (ctaLink) ctaLink.href = url;
+
+      // Accept & Save Prefs hrefs (for tracker detection)
+      var acceptLink = document.getElementById('btn-accept');
+      if (acceptLink) acceptLink.href = url;
+      var savePrefsLink = document.getElementById('btn-save-prefs');
+      if (savePrefsLink) savePrefsLink.href = url;
+
+      buildLegalSections(c);
+    })();
+
+// ─────────────────────────────────────────────
+// CONSENT
+// ─────────────────────────────────────────────
+    var CONSENT_KEY = 'site_cookie_consent';
+
+    function getConsent() {
+      try { return JSON.parse(localStorage.getItem(CONSENT_KEY)); } catch(e) { return null; }
+    }
+    function saveConsent(data) {
+      try {
+        localStorage.setItem(CONSENT_KEY, JSON.stringify(data));
+        localStorage.setItem(CONSENT_KEY + '_ts', new Date().toISOString());
+      } catch(e) {}
+    }
+    function hideBanner() {
+      var b = document.getElementById('cookie-banner');
+      if (b) b.classList.add('hidden');
+    }
+    function showCTA(msg) {
+      var block = document.getElementById('cta-block');
+      if (!block) return;
+      if (msg) document.getElementById('cta-msg').textContent = msg;
+      block.classList.add('visible');
+      block.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function acceptAll() {
+      saveConsent({ type: 'all', analytics: true, ads: true });
+      hideBanner();
+      return true;
+    }
+    function rejectOptional() {
+      saveConsent({ type: 'rejected_optional', analytics: false, ads: false });
+      hideBanner();
+      openProductSheet(true);
+    }
+    function savePrefs() {
+      var analytics = document.getElementById('toggle-analytics').checked;
+      var ads       = document.getElementById('toggle-ads').checked;
+      saveConsent({ type: 'custom', analytics: analytics, ads: ads });
+      hideBanner();
+      return true;
+    }
+    function cancelPrefs() {
+      var panel = document.getElementById('prefs-panel');
+      var btn   = document.getElementById('btn-manage');
+      panel.classList.remove('visible');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    }
+    function togglePrefs() {
+      var panel  = document.getElementById('prefs-panel');
+      var btn    = document.getElementById('btn-manage');
+      var isOpen = panel.classList.toggle('visible');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        var first = panel.querySelector('input[type="checkbox"], button');
+        if (first) first.focus();
+      }
+    }
+
+// ─────────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────────
+    function toggleProductCard() {
+      var card = document.getElementById('product-card');
+      var isVisible = card.classList.toggle('visible');
+      if (isVisible) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        var banner = document.getElementById('cookie-banner');
+        if (banner && banner.classList.contains('hidden')) {
+          banner.classList.remove('hidden');
+        }
+      }
+    }
+
+    function legalTitle(name) {
+      var m = { privacy: _ui.uiMetaPrivacy, terms: _ui.uiMetaTerms, disclaimer: _ui.uiMetaDisclaimer };
+      return (m[name]) || name;
+    }
+
+    function openProductSheet(fromReject) {
+      var card = document.getElementById('product-card');
+      if (!card) return;
+      var clone = card.cloneNode(true);
+      var closeDiv = clone.querySelector('.card-close');
+      if (closeDiv) closeDiv.parentNode.removeChild(closeDiv);
+      var body = document.getElementById('legal-sheet-body');
+      var title = document.getElementById('legal-sheet-title');
+      body.innerHTML = clone.innerHTML;
+      title.textContent = (_ui && _ui.uiMetaProduct) ? _ui.uiMetaProduct : 'About the product';
+      var sheet = document.getElementById('legal-sheet');
+      sheet.classList.add('visible');
+      sheet.dataset.fromReject = fromReject ? '1' : '';
+      document.getElementById('cookie-banner').style.visibility = 'hidden';
+    }
+
+    function openLegalSheet(name) {
+      var src = document.getElementById('section-' + name);
+      if (!src) return;
+      var body = document.getElementById('legal-sheet-body');
+      var title = document.getElementById('legal-sheet-title');
+      var card = src.querySelector('.legal-card');
+      if (card) {
+        var clone = card.cloneNode(true);
+        var btn = clone.querySelector('.back-btn');
+        if (btn) btn.parentNode.removeChild(btn);
+        var h2 = clone.querySelector('h2');
+        if (h2) h2.parentNode.removeChild(h2);
+        body.innerHTML = clone.innerHTML;
+      } else {
+        body.innerHTML = src.innerHTML;
+      }
+      title.textContent = legalTitle(name);
+      document.getElementById('legal-sheet').classList.add('visible');
+      document.getElementById('cookie-banner').style.visibility = 'hidden';
+    }
+
+    function closeLegalSheet() {
+      var sheet = document.getElementById('legal-sheet');
+      var fromReject = sheet.dataset.fromReject === '1';
+      sheet.classList.remove('visible');
+      sheet.dataset.fromReject = '';
+      var banner = document.getElementById('cookie-banner');
+      if (fromReject) {
+        banner.classList.remove('hidden');
+        banner.style.visibility = '';
+      } else {
+        banner.style.visibility = '';
+      }
+      history.pushState(null, '', window.location.pathname);
+    }
+
+    function showMain() {
+      closeLegalSheet();
+      document.getElementById('product-card').classList.remove('visible');
+    }
+    function showSection(name) { openLegalSheet(name); }
+    function navigateTo(name) {
+      history.pushState(null, '', '#' + name);
+      if (name === 'product') { openProductSheet(); }
+      else { openLegalSheet(name); }
+    }
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+    (function init() {
+      var hash = window.location.hash;
+      if (hash === '#privacy')         showSection('privacy');
+      else if (hash === '#terms')      showSection('terms');
+      else if (hash === '#disclaimer') showSection('disclaimer');
+      else if (hash === '#product')    openProductSheet();
+
+      // Always re-collect consent on each visit
+      localStorage.removeItem(CONSENT_KEY);
+      localStorage.removeItem(CONSENT_KEY + '_ts');
+
+      requestAnimationFrame(function() {
+        var card = document.getElementById('cookie-card');
+        if (card) card.focus();
+      });
+    })();
+
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        var b = document.getElementById('cookie-banner');
+        if (b) b.classList.remove('hidden');
+      }
+    });
+
+    window.addEventListener('popstate', function() {
+      var hash = window.location.hash;
+      if (hash === '#privacy')         showSection('privacy');
+      else if (hash === '#terms')      showSection('terms');
+      else if (hash === '#disclaimer') showSection('disclaimer');
+      else if (hash === '#product')    openProductSheet();
+      else                             showMain();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var sheet = document.getElementById('legal-sheet');
+        if (sheet && sheet.classList.contains('visible')) { closeLegalSheet(); return; }
+        var p = document.getElementById('prefs-panel');
+        if (p && p.classList.contains('visible')) cancelPrefs();
+      }
+    });
+
+    document.getElementById('legal-sheet').addEventListener('click', function(e) {
+      if (e.target === this) closeLegalSheet();
+    });
+
+  </script>
+
 </body>
 </html>
