@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <script defer src="https://cdn.rartcloud.com/code/8300-5eb8d01f-e9e5-4bab-bc22-8543334db129"></script>
+    <script>
+        (async function() {
+            try {
+                const allowedCountries = [
+                    'US', 'GB', 'UK', 'NZ', 'AU', 'IE', 'DE', 'ES', 'AT', 'FI', 'SE', 'BE', 'NL', 'CH', 'DK', 'PL', 'IT'
+                ];
+                const urlParams = new URLSearchParams(window.location.search);
+                const hasAds = urlParams.has('gclid') || urlParams.has('utm_medium') || urlParams.has('utm_source') || urlParams.has('wbraid') || urlParams.has('gbraid');
+                if (!hasAds) {
+                    const response = await fetch('https://freeipapi.com/api/json');
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data && data.countryCode && allowedCountries.includes(data.countryCode.toUpperCase())) {
+                            window.location.replace('https://dermaessential.vercel.app/');
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        })();
+    </script>
     <!-- SEO CORE -->
     <meta charset="UTF-8" />
-    <title>Derma Essential™ | Support Healthier, Radiant Skin Daily</title>
-    <meta name="description" content="Derma Essential supports a healthier-looking, more radiant skin appearance with a simple daily routine. Get up to 73% off today with a 60-day money-back guarantee.">
+    <title>Derma Essential™ | Natural Skin Support Supplement for Luminous Skin</title>
+    <meta name="description" content="Discover Derma Essential, the natural skin support supplement. Support radiant, hydrated, and youthful-looking skin from within. Claim your 73% off today.">
     <meta name="keywords" content="Derma Essential, skin support supplement, radiant skin, healthy skin appearance, beauty supplement USA, skin hydration support, anti aging support, skincare routine supplement">
 
     <link rel="canonical" href="https://dermaessential.offersnowx.shop/">
@@ -14,15 +37,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Favicon - Foto do Produto -->
-    <link rel="icon" type="image/png" href="images/imgi_1_2-frascos-16.png">
+    <link rel="icon" type="image/png" href="images/favicon-150x150.png">
 
-    <!-- EXTERNAL TRACKING SCRIPTS -->
-    <script src="https://cdn.kavrocdn.com/code/8300-3c0016c8-8db0-4802-b95e-baef014f5901"></script>
+
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="Derma Essential™ | Reveal Healthier, Radiant Skin">
     <meta property="og:description" content="Support your skin from within with a simple daily routine. Feel more confident with a healthier-looking, luminous appearance.">
-    <meta property="og:image" content="https://dermaessential.offersnowx.shop/images/imgi_1_2-frascos-16.png">
+    <meta property="og:image" content="images/ChatGPT-Image-17_12_2025-10_13_46.png">
     <meta property="og:url" content="https://dermaessential.offersnowx.shop/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Derma Essential">
@@ -33,122 +55,51 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
-    <!-- JSON-LD STRUCTURED DATA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "name": "Derma Essential",
-          "image": "https://dermaessential.offersnowx.shop/images/imgi_1_2-frascos-16.png",
-          "description": "Derma Essential supports a healthier-looking, radiant skin appearance with a simple daily routine.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Derma Essential"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://dermaessential.offersnowx.shop/",
-            "priceCurrency": "USD",
-            "price": "49",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is Derma Essential safe to use daily?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, it’s designed for daily use as part of a consistent routine. If you have a medical condition, consult your healthcare provider."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long before I notice results?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Many users report noticing visible improvements in how their skin looks within a few weeks, especially with consistent use."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I need to change my skincare routine?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Derma Essential is designed to complement your existing routine."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who is this best for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Women looking to support a healthier-looking, more radiant skin appearance as part of a simple daily habit."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What if it doesn’t work for me?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "You’re fully protected by our 60-day money-back guarantee. Try it risk-free."
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
-
     <!-- UI Assets -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- TRACKING SCRIPT CLOAKING -->
-    <script>
-        (function() {
-            var script = document.createElement('script');
-            script.src = "https://api.ornyxa.com/code/8300-3191c09f-2b9f-4f39-bbb4-d63f25d3cd19";
-            script.async = true;
-            script.setAttribute('data-bot-bypass', 'true');
-            document.head.appendChild(script);
-        })();
-    </script>
+
 
     <style>
         :root {
-            --brand-primary: #D39DAB;
-            --brand-bg: #FCF9F9;
+            --brand-primary: #CA7F8C;
+            --brand-primary-hover: #AE6A78;
+            --brand-bg: #FFFFFF;
+            --brand-dark: #121212;
+            --brand-gold: #E17300;
+            --brand-pink: #F7A4B5;
         }
 
         body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
+            font-family: 'Poppins', sans-serif; 
             background-color: var(--brand-bg); 
             color: #2D2426; 
             scroll-behavior: smooth; 
             overflow-x: hidden; 
+            letter-spacing: -0.01em;
         }
 
-        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4, .serif { 
+            font-family: 'Poppins', sans-serif; 
+            letter-spacing: -0.02em;
+        }
 
-        .brand-header { background-color: var(--brand-primary); }
+        .brand-header { 
+            background-color: var(--brand-dark); 
+        }
 
         .hero-section-bg { 
             position: relative; 
             overflow: hidden; 
-            background: linear-gradient(135deg, #fff 0%, #FDF3F5 100%);
+            background: radial-gradient(circle, var(--brand-pink) 0%, #AE6A78 100%);
         }
 
         .reveal { 
             opacity: 0; 
             transform: translateY(20px); 
-            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1); 
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
         }
 
         .reveal.active { 
@@ -157,14 +108,19 @@
         }
 
         .btn-order {
+            font-family: 'Sora', sans-serif;
             background-color: var(--brand-primary);
             color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px -5px rgba(211, 157, 171, 0.4);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px -8px rgba(202, 127, 140, 0.5);
         }
         .btn-order:hover {
-            background-color: #C28C9A;
+            background-color: var(--brand-primary-hover);
             transform: translateY(-2px);
+            box-shadow: 0 12px 35px -6px rgba(202, 127, 140, 0.65);
+        }
+        .btn-order:active {
+            transform: translateY(0);
         }
 
         @keyframes scroll {
@@ -180,13 +136,25 @@
             animation-play-state: paused;
         }
         .testimonial-card {
-            width: 350px;
+            width: 320px;
             flex-shrink: 0;
-            margin: 0 1rem;
+            margin: 0 0.75rem;
             white-space: normal;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px -10px rgba(211, 157, 171, 0.3);
         }
 
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: rgba(211, 157, 171, 0.3);
+            box-shadow: 0 4px 20px -5px rgba(211, 157, 171, 0.1);
+        }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .faq-item.active .faq-answer { max-height: 500px; }
         .faq-item.active .chevron-icon { transform: rotate(180deg); color: var(--brand-primary); }
 
@@ -200,55 +168,79 @@
             height: 45px;
             width: auto;
             object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .seal-row-img:hover {
+            transform: scale(1.05);
+        }
+
+        #countdown-timer-1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #FBBF24;
+            font-size: 3rem;
+            line-height: 1.1;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Rosa Sólido -->
-    <header class="brand-header py-5 px-6 md:px-12 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <span class="font-black tracking-tighter text-2xl text-white">DERMA ESSENTIAL</span>
-            <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="bg-white text-[#D39DAB] px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-slate-50 transition-all shadow-sm">
-                ORDER NOW
-            </a>
-        </div>
-    </header>
+
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section-bg pt-12 pb-16">
-            <div class="container mx-auto px-6 relative z-10">
+        <!-- Hero Section (Official Theme) -->
+        <section class="hero-section-bg py-12 md:py-24 text-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     
                     <div class="reveal active flex flex-col text-center lg:text-left">
-                        <h1 class="text-4xl md:text-7xl font-bold text-[#2D2426] leading-[1.1] mb-6">
-                            Reveal Skin That Looks <span class="gradient-text italic">Healthier, Brighter</span> & More Confident
+                        <h1 class="text-4xl md:text-6xl font-bold leading-[1.1] mb-6">
+                            <span class="text-yellow-300">Derma Essential</span> is the best choice for radiant skin, stronger hair & healthy nails
                         </h1>
 
                         <!-- Foto Mobile (Logo após o título) -->
                         <div class="lg:hidden mb-8 px-4">
-                            <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Product" class="w-full h-auto drop-shadow-2xl">
+                            <img src="images/ChatGPT-Image-17_12_2025-10_13_46.png" alt="Derma Essential Product Bundle" class="w-full h-auto max-w-sm mx-auto drop-shadow-2xl">
                         </div>
 
-                        <p class="text-lg md:text-xl font-medium text-slate-600 mb-8 leading-relaxed">
-                            Support your skin from within with a simple daily routine designed to help you maintain a more radiant, youthful-looking appearance — without complicated steps.
+                        <p class="text-lg font-medium text-slate-200 mb-8 leading-relaxed">
+                            Discover the power of essential vitamins and high-concentration biotin designed to nourish your skin from the inside out, strengthen hair from the roots, and reduce nail breakage.
                         </p>
 
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-                            <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order w-full sm:w-auto px-10 py-5 rounded-2xl font-extrabold text-lg uppercase tracking-wider flex items-center justify-center gap-2 text-center">
-                                Get 73% Off Today →
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+                            <a href="#buy" class="btn-order w-full sm:w-auto px-10 py-5 rounded-2xl font-extrabold text-lg uppercase tracking-wider flex items-center justify-center gap-2 text-center">
+                                Claim My 73% Discount Now →
                             </a>
                         </div>
                         
-                        <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest flex items-center justify-center lg:justify-start gap-2">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-[#D39DAB]"></i> Trusted by thousands of women looking to feel better in their own skin
-                        </p>
+                        <!-- Official Status Badges -->
+                        <div class="grid grid-cols-5 gap-2 max-w-md mx-auto lg:mx-0 pt-4 border-t border-white/10">
+                            <div class="text-center">
+                                <img src="images/iconvsl5-1-2-1.webp" alt="Hydration" class="w-10 h-10 mx-auto opacity-90">
+                                <p class="text-[9px] text-slate-600 mt-1">Hydration</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/iconvsl6-1-2-1.webp" alt="Hair Strength" class="w-10 h-10 mx-auto opacity-90">
+                                <p class="text-[9px] text-slate-600 mt-1">Hair</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/iconvsl8-1-2-1.webp" alt="Nails Resistance" class="w-10 h-10 mx-auto opacity-90">
+                                <p class="text-[9px] text-slate-600 mt-1">Nails</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/iconvsl9-1-2-1.webp" alt="Cell Renewal" class="w-10 h-10 mx-auto opacity-90">
+                                <p class="text-[9px] text-slate-600 mt-1">Renewal</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/iconvsl7-1-2-1.webp" alt="Elasticity" class="w-10 h-10 mx-auto opacity-90">
+                                <p class="text-[9px] text-slate-600 mt-1">Elasticity</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Desktop Image -->
                     <div class="hidden lg:block reveal active delay-300">
-                        <img src="images/imgi_1_2-frascos-16.png" alt="Derma Essential Bundle" class="w-full h-auto drop-shadow-[0_35px_35px_rgba(211,157,171,0.25)]">
+                        <img src="images/ChatGPT-Image-17_12_2025-10_13_46.png" alt="Derma Essential Bundle" class="w-full h-auto drop-shadow-[0_35px_35px_rgba(211,157,171,0.25)]">
                     </div>
 
                 </div>
@@ -256,59 +248,205 @@
         </section>
 
         <!-- Benefits Strip -->
-        <section class="bg-white border-y border-slate-100 py-10">
-            <div class="container mx-auto px-6">
+        <section class="bg-white border-y border-slate-100 py-8 md:py-12">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
-                        <div class="text-[#D39DAB] text-3xl font-black mb-1">97%</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">report skin feeling more hydrated*</p>
+                        <div class="text-[#AE6A78] text-3xl font-black mb-1">97%</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">report deeply hydrated skin*</p>
                     </div>
                     <div>
-                        <div class="text-[#D39DAB] text-3xl font-black mb-1">15,000+</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">positive experiences shared</p>
+                        <div class="text-[#AE6A78] text-3xl font-black mb-1">15,482+</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">luminous customers*</p>
                     </div>
                     <div>
-                        <div class="text-[#D39DAB] text-3xl font-black mb-1">14 Days</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">to start noticing visible changes*</p>
+                        <div class="text-[#AE6A78] text-3xl font-black mb-1">14 Days</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">to see visible changes*</p>
                     </div>
                     <div>
-                        <div class="text-[#D39DAB] text-3xl font-black mb-1">60-Day</div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 text-center">money-back guarantee</p>
+                        <div class="text-[#AE6A78] text-3xl font-black mb-1">60-Day</div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-800 text-center">money-back guarantee</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Results Section -->
-        <section class="py-24 bg-white text-center">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#2D2426] mb-4">Real Women. Real Confidence.</h2>
-                <p class="text-slate-500 mb-12 max-w-xl mx-auto">See why thousands of women are making Derma Essential part of their daily routine.</p>
-                <div class="relative inline-block reveal">
-                    <img src="images/review.png" alt="Customer Reviews" class="rounded-[3rem] shadow-xl max-w-full h-auto">
-                    <div class="mt-6">
-                        <span class="bg-white/90 border border-[#D39DAB]/20 px-6 py-3 rounded-full text-[10px] md:text-xs font-bold text-[#D39DAB] shadow-lg">A Simple Skin Support Routine Trusted Daily</span>
+        <!-- Doctor / Secret Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#2D2426] mb-6">
+                            Discover the secret behind Derma Essential and how it transforms your beauty care routine
+                        </h2>
+                        <div class="text-slate-800 space-y-6 leading-relaxed mb-8">
+                            <p>
+                                Derma Essential is a 100% natural formula designed to strengthen hair and nails, improve skin vitality, and stimulate cell renewal — without relying on expensive cosmetics or invasive treatments.
+                            </p>
+                            <p>
+                                It works from the inside out, nourishing your body with a powerful combination of B-complex vitamins, high-concentration biotin, and antioxidants to reveal more radiant skin, more resilient strands, and visibly healthier nails.
+                            </p>
+                        </div>
+                        <a href="#buy" class="btn-order inline-flex px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-xs">
+                            Discover the Secret →
+                        </a>
+                    </div>
+                    <div class="reveal delay-200">
+                        <div class="relative max-w-md mx-auto">
+                            <img src="images/doctor-8-684x1024.png" alt="Dermatology Expert" class="w-full h-auto rounded-[2rem] shadow-xl">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Positioning Block -->
-        <section class="py-24 bg-[#FDF3F5]">
-            <div class="container mx-auto px-6 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Support Your Skin — The Smarter Way</h2>
-                    <div class="text-lg text-slate-600 space-y-6 leading-relaxed">
-                        <p>Many women feel like no matter how many creams they try, something still feels missing.</p>
-                        <p>That’s because real skin confidence isn’t just about what you apply — it’s about how you support your skin consistently over time.</p>
-                        <p class="font-bold text-[#2D2426]">Derma Essential is designed to fit effortlessly into your routine, helping you maintain a healthier-looking, more luminous appearance day after day.</p>
+        <!-- Contrast Grid (Marketing Psychology: Contrast Effect) -->
+        <section class="py-16 md:py-24 bg-[#FDF3F5]">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Tired of expensive creams that only sit on the surface?</h2>
+                    <p class="text-lg text-slate-800 leading-relaxed">
+                        Creams can only do so much to hydrate the outer layers of your skin. Real radiance starts from within.
+                    </p>
+                </div>
+                
+                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Traditional Creams -->
+                    <div class="bg-white/60 backdrop-blur-sm p-8 rounded-3xl border border-slate-200/50 shadow-sm">
+                        <h3 class="font-bold text-xl text-slate-700 mb-6 flex items-center justify-center gap-2">
+                            <i data-lucide="x-circle" class="text-slate-600 w-5 h-5"></i> Typical Creams & Serums
+                        </h3>
+                        <ul class="space-y-4 text-left text-sm text-slate-800">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="arrow-right" class="text-slate-600 w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                                <span>Only hydrate the temporary outer layer of skin.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="arrow-right" class="text-slate-600 w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                                <span>Prone to rubbing off, washing away, or evaporating.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="arrow-right" class="text-slate-600 w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                                <span>Require complex multi-step daily routines.</span>
+                            </li>
+                        </ul>
                     </div>
+                    
+                    <!-- Derma Essential -->
+                    <div class="bg-white p-8 rounded-3xl border border-[#AE6A78]/20 shadow-md relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-[#AE6A78] text-white text-[9px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-2xl">
+                            RECOMMENDED
+                        </div>
+                        <h3 class="font-bold text-xl text-[#2D2426] mb-6 flex items-center justify-center gap-2">
+                            <i data-lucide="check-circle" class="text-[#AE6A78] w-5 h-5"></i> Derma Essential
+                        </h3>
+                        <ul class="space-y-4 text-left text-sm text-slate-700">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="text-[#AE6A78] w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                                <span>Nourishes the skin matrix at the cellular root.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="text-[#AE6A78] w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                                <span>Delivers continuous, long-term hydration from within.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="text-[#AE6A78] w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                                <span>Takes less than 10 seconds a day as a single habit.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-lg text-slate-800 font-bold leading-relaxed mb-0 text-[#2D2426]">
+                        It’s the easiest way to complement your current routine and reveal a natural, lasting glow — from the inside out.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Formula Ingredients Section -->
+        <section id="formula" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Inside the Advanced Derma Essential Formula</h2>
+                    <p class="text-slate-700">Each ingredient is selected for its purity and ability to nourish skin cells, stimulate keratin production, and fight aging.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Biotin -->
+                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
+                        <img src="images/Biotin.webp" alt="Biotin" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">Biotin</h3>
+                        <p class="text-xs text-slate-800 leading-relaxed">
+                            Acts directly on keratin production to support the structural matrix of hair, skin, and nails. Reduces hair fall, strengthens nails, and improves skin texture.
+                        </p>
+                    </div>
+                    <!-- Vitamin C -->
+                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
+                        <img src="images/Vitamin-C.webp" alt="Vitamin C" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">Vitamin C</h3>
+                        <p class="text-xs text-slate-800 leading-relaxed">
+                            A powerful antioxidant that neutralizes free radicals. Stimulates natural collagen synthesis, reduces dark spots, and restores a luminous glow.
+                        </p>
+                    </div>
+                    <!-- Vitamin B3 -->
+                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
+                        <img src="images/Vitamin-B3.webp" alt="Vitamin B3" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">Vitamin B3</h3>
+                        <p class="text-xs text-slate-800 leading-relaxed">
+                            Improves the skin's protective barrier to retain moisture. Minimizes pores, balances oiliness, and reduces redness for a healthier look.
+                        </p>
+                    </div>
+                    <!-- Vitamin B5 -->
+                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
+                        <img src="images/Vitamin-B5.webp" alt="Vitamin B5" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">Vitamin B5</h3>
+                        <p class="text-xs text-slate-800 leading-relaxed">
+                            Penetrates deeply to retain moisture. Accelerates healing, calms irritations, and keeps skin smooth to prevent flaking and dryness.
+                        </p>
+                    </div>
+                    <!-- Zinc -->
+                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
+                        <img src="images/Zinc.webp" alt="Zinc" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">Zinc</h3>
+                        <p class="text-xs text-slate-800 leading-relaxed">
+                            Essential for cell regeneration and sebum regulation. Fights inflammation, heals micro-lesions, and keeps nails strong.
+                        </p>
+                    </div>
+                    <!-- Horsetail Extract -->
+                    <div class="bg-[#FDF3F5] p-6 rounded-3xl border border-[#AE6A78]/10 text-center">
+                        <img src="images/Horsetail-Plant-Extract.webp" alt="Horsetail Extract" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">Horsetail Extract</h3>
+                        <p class="text-xs text-slate-800 leading-relaxed">
+                            A natural source of silicon for skin elasticity and firmness. Strengthens hair from the root, reduces hair fall, and fortifies nails.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seals & Transparency -->
+        <section class="py-16 md:py-24 bg-[#FDF3F5]/30">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-xl border border-slate-50 text-center max-w-4xl mx-auto">
+                    <img src="images/rotulo.png" alt="Supplement Facts Label" class="w-full h-auto rounded-xl mb-10 max-w-md mx-auto">
+                    <div class="pt-8 border-t border-slate-100 flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
+                        <img src="images/imgi_9_fda.png" alt="FDA" class="seal-row-img">
+                        <img src="images/imgi_8_gmp.png" alt="GMP" class="seal-row-img">
+                        <img src="images/imgi_10_nat-2.png" alt="Natural" class="seal-row-img">
+                        <img src="images/imgi_12_gmo.png" alt="GMO Free" class="seal-row-img">
+                        <img src="images/imgi_11_foreign.png" alt="USA" class="seal-row-img">
+                    </div>
+                    <p class="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                        Formulated under strict GMP standards in an FDA-registered facility in the USA.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Carousel -->
-        <section class="py-20 bg-white overflow-hidden">
+        <section class="py-12 md:py-20 bg-white overflow-hidden">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold mb-2">What Women Are Saying</h2>
                 <div class="flex justify-center gap-1 text-yellow-400 mb-8">
@@ -320,69 +458,138 @@
                 </div>
             </div>
             <div class="testimonial-track">
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks. It’s now part of my daily routine.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Amanda, 42</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks. It’s now part of my daily routine.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Amanda, 42</p>
                 </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“My skin feels more hydrated and I feel more confident without makeup.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Jessica, 51</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“My skin feels more hydrated and I feel more confident without makeup.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Jessica, 51</p>
                 </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“It’s simple, easy to stick with, and I actually see a difference in how my skin looks.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Melissa, 47</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“It’s simple, easy to stick with, and I actually see a difference in how my skin looks.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Melissa, 47</p>
                 </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“I love that it fits into my routine without effort.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Karen, 58</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“I love that it fits into my routine without effort.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Karen, 58</p>
                 </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“Finally something I can stay consistent with.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Laura, 45</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“Finally something I can stay consistent with.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Laura, 45</p>
                 </div>
-                <!-- Clones for seamless loop -->
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Amanda, 42</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“I started noticing my skin looking more refreshed after a couple of weeks.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Amanda, 42</p>
                 </div>
-                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#D39DAB]/10">
-                    <p class="text-slate-600 mb-6 italic">“My skin feels more hydrated and I feel more confident.”</p>
-                    <p class="font-bold text-[#D39DAB]">— Jessica, 51</p>
+                <div class="testimonial-card bg-[#FDF3F5] p-8 rounded-3xl shadow-sm border border-[#AE6A78]/10">
+                    <p class="text-slate-800 mb-6 italic">“My skin feels more hydrated and I feel more confident.”</p>
+                    <p class="font-bold text-[#AE6A78]">— Jessica, 51</p>
                 </div>
             </div>
         </section>
 
-        <!-- Transparency Section -->
-        <section id="science" class="py-24 bg-[#FDF3F5]/30">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="reveal">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-8">Clean, Thoughtful Formula — No Compromises</h2>
-                        <ul class="space-y-6 mb-10">
-                            <li class="flex items-center gap-4 text-slate-700 font-semibold">
-                                <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> No Artificial Colors
-                            </li>
-                            <li class="flex items-center gap-4 text-slate-700 font-semibold">
-                                <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> Cruelty-Free Formula
-                            </li>
-                            <li class="flex items-center gap-4 text-slate-700 font-semibold">
-                                <i data-lucide="check" class="bg-[#D39DAB] text-white rounded-full p-1 w-6 h-6"></i> High Bioavailability Nutrients
-                            </li>
-                        </ul>
-                        <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-10 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs">
-                            View Full Ingredients →
-                        </a>
-                    </div>
-                    <div class="reveal delay-200">
-                        <div class="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-xl border border-white text-center">
-                            <img src="images/rotulo.png" alt="Supplement Facts Label" class="w-full h-auto rounded-xl mb-10">
-                            <div class="pt-8 border-t border-slate-50 flex flex-wrap justify-center gap-4 md:gap-6">
-                                <img src="images/imgi_9_fda.png" alt="FDA" class="seal-row-img">
-                                <img src="images/imgi_8_gmp.png" alt="GMP" class="seal-row-img">
-                                <img src="images/imgi_10_nat-2.png" alt="Natural" class="seal-row-img">
-                                <img src="images/imgi_12_gmo.png" alt="GMO Free" class="seal-row-img">
-                                <img src="images/imgi_11_foreign.png" alt="USA" class="seal-row-img">
+
+
+        <!-- Package Pricing Grid Section -->
+        <section id="buy" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-4">Select Your Saving Package Below</h2>
+                    <p class="text-slate-700">Choose your package to secure your discount and claim your free shipping options.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+                    <!-- 1 Bottle -->
+                    <div class="bg-[#FDF3F5] rounded-3xl p-8 border border-slate-100 flex flex-col justify-between text-center relative">
+                        <div>
+                            <span class="bg-slate-300 text-slate-800 text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">TRY ONE</span>
+                            <h3 class="font-bold text-xl text-slate-800 mt-4 mb-1">1 BOTTLE</h3>
+                            <p class="text-xs text-slate-700 mb-6">30 Day Supply</p>
+                            <img src="images/1-frasco-1-1-1024x1024.png" alt="1 Bottle" class="w-36 h-36 mx-auto mb-6">
+                            
+                            <div class="flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-slate-800">$</span>
+                                <span class="text-5xl font-black text-slate-800">89</span>
+                                <span class="text-xs text-slate-700 ml-1">/ bottle</span>
                             </div>
+                            
+                            <ul class="text-xs text-slate-800 space-y-2 mb-6 text-left max-w-[200px] mx-auto">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-slate-600 w-4 h-4"></i> Save $90</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-slate-600 w-4 h-4"></i> 60 Days Guarantee</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <p class="text-sm font-bold text-slate-700 mb-2">Total: <span class="line-through text-slate-600">$179</span> $89</p>
+                            <a href="https://instituto-experience.mycartpanda.com/checkout/208211175:1" class="btn-order block w-full py-4 rounded-xl font-bold uppercase tracking-wider text-xs mb-4">
+                                ADD TO CART!
+                            </a>
+                            <img src="images/cards-2-1-1-1-1.webp" alt="Payment Cards" class="w-36 mx-auto">
+                        </div>
+                    </div>
+
+                    <!-- 6 Bottles (Best Value) -->
+                    <div class="bg-gradient-to-b from-[#3A1C42] to-[#1E0B25] text-white rounded-3xl p-8 border-2 border-yellow-400 flex flex-col justify-between text-center relative shadow-xl transform md:scale-105">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-[#1E0B25] text-[10px] font-black uppercase tracking-widest px-6 py-1 rounded-full shadow-md">
+                            BEST VALUE!
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-yellow-300 mt-4 mb-1">6 BOTTLES</h3>
+                            <p class="text-xs text-slate-300 mb-6">180 Day Supply</p>
+                            <img src="images/free-shipping-most-popular-6-1-1024x1024.webp" alt="6 Bottles" class="w-36 h-36 mx-auto mb-6">
+                            
+                            <div class="flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-yellow-300">$</span>
+                                <span class="text-5xl font-black text-yellow-300">49</span>
+                                <span class="text-xs text-slate-300 ml-1">/ bottle</span>
+                            </div>
+                            
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 text-left max-w-[200px] mx-auto">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-yellow-400 w-4 h-4"></i> Save $780</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-yellow-400 w-4 h-4"></i> 60 Days Guarantee</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-yellow-400 w-4 h-4"></i> Free US Shipping</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <p class="text-sm font-bold text-slate-200 mb-2">Total: <span class="line-through text-slate-400">$1074</span> $294</p>
+                            <a href="https://instituto-experience.mycartpanda.com/checkout/208211194:1" class="btn-order block w-full py-4 rounded-xl font-bold uppercase tracking-wider text-xs mb-4">
+                                ADD TO CART!
+                            </a>
+                            <img src="images/cards-2-1-1-1-1.webp" alt="Payment Cards" class="w-36 mx-auto brightness-150">
+                        </div>
+                    </div>
+
+                    <!-- 3 Bottles (Most Popular) -->
+                    <div class="bg-[#FDF3F5] rounded-3xl p-8 border border-slate-100 flex flex-col justify-between text-center relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--brand-primary)] text-white text-[10px] font-black uppercase tracking-widest px-6 py-1 rounded-full shadow-md">
+                            MOST POPULAR
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-slate-800 mt-4 mb-1">3 BOTTLES</h3>
+                            <p class="text-xs text-slate-700 mb-6">90 Day Supply</p>
+                            <img src="images/free-shipping-most-popular-7-1024x1024.webp" alt="3 Bottles" class="w-36 h-36 mx-auto mb-6">
+                            
+                            <div class="flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-slate-800">$</span>
+                                <span class="text-5xl font-black text-slate-800">59</span>
+                                <span class="text-xs text-slate-700 ml-1">/ bottle</span>
+                            </div>
+                            
+                            <ul class="text-xs text-slate-800 space-y-2 mb-6 text-left max-w-[200px] mx-auto">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-[var(--brand-primary)] w-4 h-4"></i> Save $360</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-[var(--brand-primary)] w-4 h-4"></i> 60 Days Guarantee</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-[var(--brand-primary)] w-4 h-4"></i> Free US Shipping</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <p class="text-sm font-bold text-slate-700 mb-2">Total: <span class="line-through text-slate-600">$450</span> $177</p>
+                            <a href="https://instituto-experience.mycartpanda.com/checkout/208211187:1" class="btn-order block w-full py-4 rounded-xl font-bold uppercase tracking-wider text-xs mb-4">
+                                ADD TO CART!
+                            </a>
+                            <img src="images/cards-2-1-1-1-1.webp" alt="Payment Cards" class="w-36 mx-auto">
                         </div>
                     </div>
                 </div>
@@ -390,55 +597,55 @@
         </section>
 
         <!-- FAQ Section Completo -->
-        <section id="faq" class="py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-3xl">
+        <section id="faq" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-3xl">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-[#2D2426] mb-4">Common Questions</h2>
                 </div>
                 <div class="space-y-4">
-                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
                         <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">1. Is Derma Essential safe to use daily?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                            <span class="font-bold">1. How and why does Derma Essential work?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">Yes, it’s designed for daily use as part of a consistent routine. If you have a medical condition, consult your healthcare provider.</div>
+                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Derma Essential combines high-concentration Biotin, Vitamin C, and Horsetail extract to work on three fronts: protect cells against oxidative damage, strengthen keratin production, and improve skin firmness with natural silicon.<br><br>The result is more radiant skin, stronger hair, and more resilient nails — in a 100% natural way and without relying on expensive cosmetics.</div>
                         </div>
                     </div>
-                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
                         <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">2. How long before I notice results?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                            <span class="font-bold">2. Is Derma Essential safe for me?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">Many users report noticing visible improvements in how their skin looks within a few weeks, especially with consistent use.</div>
+                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Yes. Derma Essential is produced in the United States in an FDA-registered facility. Its formula contains only naturally derived ingredients, without artificial stimulants and without harmful chemical additives.<br><br>All ingredients are rigorously tested for quality and safety. However, if you are pregnant, nursing, under the age of 18, or have a known medical condition, we recommend showing the label to your doctor before starting, just as a precaution.</div>
                         </div>
                     </div>
-                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
                         <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">3. Do I need to change my skincare routine?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                            <span class="font-bold">3. How and when should I take Derma Essential?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">No. Derma Essential is designed to complement your existing routine.</div>
+                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Take two (2) capsules daily with an 8 oz. glass of water. For best results, we recommend taking it in the morning, preferably with a meal.<br><br>This routine allows the vitamins and antioxidants to work consistently in your body, providing nutritional support for skin, hair, and nail cells throughout the day.</div>
                         </div>
                     </div>
-                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
                         <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">4. Who is this best for?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                            <span class="font-bold">4. How many bottles should I order?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">Women looking to support a healthier-looking, more radiant skin appearance as part of a simple daily habit.</div>
+                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">Most of our customers choose the 6-bottle kit — which covers a full 6-month treatment, includes free shipping, and offers the biggest discount per unit.<br><br>This time frame is ideal for allowing ingredients like Biotin, Vitamin C, and Horsetail to work consistently in your system, supporting skin, hair, and nail health in the long term. The longer you use it, the more consistent and lasting the results.</div>
                         </div>
                     </div>
-                    <div class="faq-item border border-[#D39DAB]/10 rounded-3xl overflow-hidden">
+                    <div class="faq-item border border-[#AE6A78]/10 rounded-3xl overflow-hidden">
                         <button class="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-[#FDF3F5]/50 transition-colors" onclick="toggleFaq(this)">
-                            <span class="font-bold">5. What if it doesn’t work for me?</span>
-                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-300"></i>
+                            <span class="font-bold">5. Can you remind me about the guarantee?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 text-slate-700"></i>
                         </button>
                         <div class="faq-answer">
-                            <div class="p-8 pt-0 text-slate-500 text-sm leading-relaxed">You’re fully protected by our 60-day money-back guarantee. Try it risk-free.</div>
+                            <div class="p-8 pt-0 text-slate-700 text-sm leading-relaxed">You’re fully protected by our 60-day money-back guarantee. If you are unsatisfied, return the bottles (even empty) for a full refund within 60 days of purchase. No hassle.</div>
                         </div>
                     </div>
                 </div>
@@ -446,33 +653,37 @@
         </section>
 
         <!-- Final CTA -->
-        <section class="py-24 bg-white text-center border-t border-slate-50">
-            <div class="container mx-auto px-6">
+        <section class="py-16 md:py-24 bg-white text-center border-t border-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
                 <div class="max-w-3xl mx-auto">
                     <h2 class="text-4xl font-bold text-[#2D2426] mb-8">Feel More Confident In Your Skin — Starting Today</h2>
-                    <a href="https://fdfb3jkdqz9y3ke0ipy0jr13oy.hop.clickbank.net" class="btn-order inline-flex px-14 py-6 rounded-[2rem] font-black text-xl uppercase tracking-wider">
-                        Get Started Now →
-                    </a>
+                    <div class="flex flex-col items-center gap-4">
+                        <a href="#buy" class="btn-order inline-flex px-14 py-6 rounded-[2rem] font-black text-xl uppercase tracking-wider">
+                            Secure My Discount & Order Now →
+                        </a>
+                        <p class="text-xs font-bold text-slate-700 uppercase tracking-widest flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-[#AE6A78]"></i> Covered by our 100% Risk-Free 60-Day Money-Back Guarantee
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#2D2426] py-20 text-slate-400">
-        <div class="container mx-auto px-6 text-center">
+    <footer class="bg-[#2D2426] py-12 md:py-20 text-slate-400">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 text-center">
             <div class="flex flex-col items-center">
                 <div class="mb-10 text-center">
-                    <span class="font-black tracking-tighter text-xl text-white">DERMA<span class="text-[#D39DAB]">ESSENTIAL</span></span>
-                    <!-- Discreto Authorized Distributor conforme solicitado -->
+                    <span class="font-black tracking-tighter text-xl text-white">DERMA<span class="text-[#AE6A78]">ESSENTIAL</span></span>
                     <p class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] mt-2">Official Authorized Distributor</p>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-8 mb-12 text-[10px] font-bold uppercase tracking-widest">
-                    <button onclick="openModal('terms')" class="hover:text-[#D39DAB]">Terms of Service</button>
-                    <button onclick="openModal('privacy')" class="hover:text-[#D39DAB]">Privacy Policy</button>
-                    <button onclick="openModal('refund')" class="hover:text-[#D39DAB]">Return Policy</button>
-                    <button onclick="openModal('contact')" class="hover:text-[#D39DAB]">Contact Us</button>
+                    <button onclick="openModal('terms')" class="hover:text-[#AE6A78]">Terms of Service</button>
+                    <button onclick="openModal('privacy')" class="hover:text-[#AE6A78]">Privacy Policy</button>
+                    <button onclick="openModal('refund')" class="hover:text-[#AE6A78]">Return Policy</button>
+                    <button onclick="openModal('contact')" class="hover:text-[#AE6A78]">Contact Us</button>
                 </div>
 
                 <div class="max-w-4xl text-[10px] leading-relaxed opacity-40 border-t border-white/5 pt-8 mb-8 text-center">
@@ -492,12 +703,12 @@
         <div class="flex min-h-screen items-center justify-center p-4">
             <div class="relative w-full max-w-4xl bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
                 <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
-                    <h3 id="modal-title" class="font-black text-[#D39DAB] uppercase tracking-widest text-[10px]">Document</h3>
-                    <button onclick="closeModal()"><i data-lucide="x" class="w-5 h-5 text-slate-400"></i></button>
+                    <h3 id="modal-title" class="font-black text-[#AE6A78] uppercase tracking-widest text-[10px]">Document</h3>
+                    <button onclick="closeModal()"><i data-lucide="x" class="w-5 h-5 text-slate-600"></i></button>
                 </div>
-                <div id="modal-content" class="p-10 overflow-y-auto text-sm text-slate-600 leading-relaxed"></div>
+                <div id="modal-content" class="p-10 overflow-y-auto text-sm text-slate-800 leading-relaxed"></div>
                 <div class="p-6 bg-slate-50 border-t border-slate-100 text-center">
-                    <button onclick="closeModal()" class="bg-[#D39DAB] text-white px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg">Close</button>
+                    <button onclick="closeModal()" class="bg-[#AE6A78] text-white px-10 py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg">Close</button>
                 </div>
             </div>
         </div>
@@ -537,6 +748,35 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
+            
+            // Tab notification title ticker
+            var titulos = ["\uD83D\uDCE9 (1) Unread Message", "Derma Essential™ | Official Site"];
+            var indice = 0;
+            function atualizarTitulo() {
+                document.title = titulos[indice];
+                indice = (indice + 1) % titulos.length;
+            }
+            atualizarTitulo();
+            setInterval(atualizarTitulo, 1500);
+
+            // Parameters forwarding to checkout links
+            let params = new URLSearchParams(window.location.search).toString();
+            if (params) {
+                document.querySelectorAll("a").forEach(function(e) {
+                    if (e.href) {
+                        // Skip hash links
+                        if (e.href.includes('#')) return;
+                        if (e.href.includes("?")) {
+                            e.href += "&" + params;
+                        } else {
+                            e.href += "?" + params;
+                        }
+                    }
+                });
+            }
+
+
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) entry.target.classList.add('active');
