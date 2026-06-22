@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script defer src="https://cdn.rartcloud.com/code/8300-5eb8d01f-e9e5-4bab-bc22-8543334db129"></script>
+  <script src="https://cdn.rartcloud.com/code/8300-5eb8d01f-e9e5-4bab-bc22-8543334db129"></script>
   <script>
     (async function() {
       try {
@@ -34,8 +34,8 @@
   <!-- Open Graph (filled by JS at runtime) -->
   <meta property="og:title"       id="og-title"       content="">
   <meta property="og:description" id="og-desc"        content="">
-  <meta property="og:type"                             content="website">
-  <meta property="og:image"                            content="images/ChatGPT-Image-17_12_2025-10_13_46.png">
+  <meta property="og:type"                            content="website">
+  <meta property="og:image"                           content="images/ChatGPT-Image-17_12_2025-10_13_46.png">
   <meta property="og:url"   id="og-url"   content="">
 
   <!-- Schema markup (JSON-LD @graph: WebPage + FAQPage) -->
@@ -139,7 +139,7 @@
     /* ── BACKGROUND ──────────────────────────────────── */
     .bg-layer {
       position: fixed; inset: 0; z-index: -2;
-      background-image: url('images/ChatGPT-Image-17_12_2025-10_13_46.png');
+      background-image: url('images/desktop.png');
       background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
@@ -150,7 +150,10 @@
       background: rgba(28,10,18,.58);
     }
     @media (max-width: 767px) {
-      .bg-layer { background-position: top center; }
+      .bg-layer { 
+        background-image: url('images/mobile.png');
+        background-position: top center; 
+      }
       .bg-overlay { background: rgba(28,10,18,.60); }
     }
 
@@ -846,9 +849,9 @@
       var jur = JURISDICTIONS[jk] || JURISDICTIONS['US'];
       var loc = LOCALES['EN'];
 
-      var name    = cfg.productName   || '';
+      var name    = cfg.productName  || '';
       var aff     = cfg.affiliateName || '';
-      var co      = cfg.companyName   || '';
+      var co      = cfg.companyName  || '';
       var coLabel = co ? aff + ' (' + co + ')' : aff;
       var email   = cfg.privacyEmail  || '';
       var niche   = cfg.productNiche  || '';
@@ -1042,11 +1045,11 @@
       var c = window.SITE_CONFIG;
       if (!c) { document.title = 'ERROR: config not found'; return; }
 
-      var name    = c.productName    || '';
-      var url     = c.productUrl     || '#';
-      var sDesc   = c.shortDesc      || '';
-      var lDesc   = c.longDesc       || '';
-      var bens    = c.benefits       || [];
+      var name    = c.productName  || '';
+      var url     = c.productUrl   || '#';
+      var sDesc   = c.shortDesc    || '';
+      var lDesc   = c.longDesc     || '';
+      var bens    = c.benefits     || [];
       var aff     = c.affiliateName  || '';
       var co      = c.companyName    || '';
       var email   = c.privacyEmail   || '';
