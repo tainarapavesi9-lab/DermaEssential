@@ -146,15 +146,13 @@
       filter: none;
     }
     .bg-overlay {
-      position: fixed; inset: 0; z-index: -1;
-      background: rgba(28,10,18,.58);
+      display: none;
     }
     @media (max-width: 767px) {
       .bg-layer { 
         background-image: url('images/mobile.png');
         background-position: top center; 
       }
-      .bg-overlay { background: rgba(28,10,18,.60); }
     }
 
     /* ── PAGE WRAPPER ────────────────────────────────── */
@@ -368,7 +366,7 @@
 
     .cookie-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .cookie-text  { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
-    .cookie-text a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+    .cookie-text a { color: #2563EB; text-decoration: underline; text-underline-offset: 2px; }
 
     /* Buttons */
     .cookie-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
@@ -382,10 +380,10 @@
       display: inline-block; text-decoration: none;
     }
     .btn-accept {
-      background: var(--brand); color: #fff; border-color: var(--brand);
+      background: #2563EB; color: #fff; border-color: #2563EB;
       flex: 1; min-width: 130px; text-align: center;
     }
-    .btn-accept:hover { background: var(--brand-hover); border-color: var(--brand-hover); }
+    .btn-accept:hover { background: #1D4ED8; border-color: #1D4ED8; }
     .btn-reject {
       background: #fff; color: var(--text); border-color: var(--border-btn);
       flex: 1; min-width: 130px; text-align: center;
